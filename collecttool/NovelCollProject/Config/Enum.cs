@@ -19,9 +19,6 @@
         DetailPage1,
         DetailPage2,
         DetailPage3,
-
-        ChapterList,
-        ChapterDetail,
     }
 
     enum ResponseStatusEnum : short

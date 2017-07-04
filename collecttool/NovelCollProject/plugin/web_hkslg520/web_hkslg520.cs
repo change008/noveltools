@@ -1,15 +1,14 @@
-﻿using HtmlAgilityPack;
-using NovelCollProject;
-using NovelCollProjectutils;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
+using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_hunhun520
+namespace NovelCollProject.plugin.web_hkslg520
 {
     class Page : PageBase
     {
@@ -28,10 +27,10 @@ namespace NovelCollProject.plugin.web_hunhun520
         /// <param name="pageFeature"></param>
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
-            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:hunhun520.com/book/\w+/$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:hunhun520.com/book/\w+/\?chapter=");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:hunhun520.com/book/\w+/\d+.html");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage2, @"REG:hunhun520.com/book/\w+/\d+_\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:hkslg520.com/nonono$");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:hkslg520.com/\d+/\d+/\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:hkslg520.com/\d+/\d+/\d+.html");
+            //pageFeature.InjectUrlRule(PageTypeEnum.DetailPage2, @"REG:hkslg520.com/\d+/\d+/\d+_\d+.html");
         }
 
 
@@ -123,7 +122,7 @@ namespace NovelCollProject.plugin.web_hunhun520
             //    var url = linkNodes.GetAttributeValue("href", "");
             //    ht.Add(CollectionFieldName.Url, url);
             //}
-            var url = InternalRealUrl+ "?chapter=";
+            var url = InternalRealUrl + "?chapter=";
             ht.Add(CollectionFieldName.Url, url);
             //linkNodes = documentNode.SelectSingleNode("//div[@class='book_intro']/p[@id='summary']");
             //if (linkNodes != null)
@@ -135,7 +134,7 @@ namespace NovelCollProject.plugin.web_hunhun520
             tempMatch = tempReg.Match(InternalRealUrl);
             if (tempMatch.Success)
             {
-                ht.Add(CollectionFieldName.Novel_UniqueFlag, tempReg.Replace(tempMatch.Value,"$1"));
+                ht.Add(CollectionFieldName.Novel_UniqueFlag, tempReg.Replace(tempMatch.Value, "$1"));
             }
             Hashtable returndata = new Hashtable();
             if (ht != null)
@@ -144,7 +143,7 @@ namespace NovelCollProject.plugin.web_hunhun520
         }
 
         /// <summary>
-        /// 解析列表页内容
+        /// 解析列表页内容--解析章节列表数据
         /// </summary>
         /// <param name="documentNode"></param>
         /// <returns></returns>
@@ -152,9 +151,9 @@ namespace NovelCollProject.plugin.web_hunhun520
         {
             List<Hashtable> links = null;
             List<string> multipage = null;
-            Regex reg  ;
-            Match m ;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@id='list']/dl/dd");
+            Regex reg;
+            Match m;
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@class=\"dccss\"]");
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();
@@ -165,7 +164,7 @@ namespace NovelCollProject.plugin.web_hunhun520
                     if (string.IsNullOrEmpty(url))
                         continue;
                     reg = new Regex(@"(\d+).html");
-                     m = reg.Match(url);
+                    m = reg.Match(url);
                     string flag = reg.Replace(m.Value, "$1");
                     Hashtable ht = new Hashtable();
                     ht.Add(CollectionFieldName.Chap_Title, title);
@@ -184,36 +183,9 @@ namespace NovelCollProject.plugin.web_hunhun520
                     else
                     {
                     }
-                   
+
 
                     links.Add(ht);
-                }
-            }
-            HtmlNode nextLink = documentNode.SelectNodes("//ul[@class='pager']/li/a")?.FirstOrDefault(x => x.InnerText == "下一页");
-            if (nextLink != null&& links!=null&& links.Count>1)
-            {
-
-                int bookId = 0;
-                reg = new Regex(@"book/(\d+)/");
-                m = reg.Match(InternalRealUrl);
-                if (m.Success)
-                {
-                    bookId = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                }
-                int p = 1;
-                reg = new Regex(@"p=(\d+)");
-                m = reg.Match(InternalRealUrl);
-                if (m.Success)
-                {
-                    p = Convert.ToInt32(reg.Replace(m.Value, "$1")) + 1;
-                }
-                else
-                    p++;
-                var nexturl =string.Format("http://xsm.meixiangdao.com/book/{0}/chapters?p={1}&sort=asc",bookId,p);
-                //if(PageFeature.MatchURL(nexturl) == PageTypeEnum.DetailPage1)
-                if (!string.IsNullOrEmpty(nexturl) && nexturl != "#")
-                {
-                    multipage = new List<string>() { nexturl };
                 }
             }
             Hashtable returndata = new Hashtable();
@@ -234,19 +206,21 @@ namespace NovelCollProject.plugin.web_hunhun520
             Hashtable returndata = new Hashtable();
             HtmlNode tempNode = null;
             string tempString = null;
-            string tempInnerText= null;
+            string tempInnerText = null;
             Regex tempReg = null;
             Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
+            tempNode = documentNode.SelectSingleNode("//div[@id='content']/p");
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
                 tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script");
-                tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
-                tempString= tempString.Replace("\r\n", "").Replace("\t", "").Replace("手机请访问：:feisuz","")
-                    .Replace("feisuz","").Replace("作者的话:","").Replace("新书，求收藏求推荐","").Replace("本书红薯网首发,请勿转载!", "");
+                //tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
+                tempString = tempString.Replace("\r\n", "").Replace("\t", "").Replace("手机请访问：:feisuz", "")
+                    .Replace("feisuz", "").Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
-                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;","").Replace("feisuz", "")
+
+                //移除无效字符,用来计算长度
+                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "").Replace("feisuz", "")
                     .Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
                 if (!string.IsNullOrEmpty(tempInnerText))
                 {
@@ -256,7 +230,8 @@ namespace NovelCollProject.plugin.web_hunhun520
                     {
                         into = tempInnerText.Substring(0, 40) + "...";
                     }
-                    else {
+                    else
+                    {
                         into = tempInnerText;
                     }
                     returndata.Add(CollectionFieldName.Chap_Intro, into);
@@ -272,14 +247,6 @@ namespace NovelCollProject.plugin.web_hunhun520
                 tempInnerText = tempNode.InnerText;
 
             }
-            HtmlNode nextLink = documentNode.SelectNodes("//*[@id='content']/div[@class='text']/a")?.FirstOrDefault(x => x.InnerText == "下一节");
-            if (nextLink != null)
-            {
-
-                string url = nextLink.GetAttributeValue("href", "");
-                if (!string.IsNullOrEmpty(url) && url != "#")
-                    returndata.Add(CollectionFieldName.NextUrl, url);
-            }
             return returndata;
         }
 
@@ -290,33 +257,7 @@ namespace NovelCollProject.plugin.web_hunhun520
         /// <returns></returns>
         private Hashtable parseDetailPage2(HtmlNode documentNode)
         {
-            List<string> multipage = null;
-            Hashtable returndata = new Hashtable();
-            HtmlNode tempNode = null;
-            string tempString = null;
-            string tempInnerText = null;
-            Regex tempReg = null;
-            Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
-            if (tempNode != null)
-            {
-                tempString = tempNode.InnerHtml;
-                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script");
-                tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "");
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "").Replace("手机请访问：:feisuz", "").Replace("feisuz", "")
-                    .Replace("feisuz", "").Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
-                returndata.Add(CollectionFieldName.ExContent, tempString);
-            }
-            HtmlNode nextLink = documentNode.SelectNodes("//*[@id='content']/div[@class='text']/a")?.FirstOrDefault(x => x.InnerText == "下一节");
-            if (nextLink != null)
-            {
-
-                string url = nextLink.GetAttributeValue("href", "");
-                if (!string.IsNullOrEmpty(url) && url != "#")
-                    returndata.Add(CollectionFieldName.NextUrl, url);
-            }
-            return returndata;
+            return null;
         }
     }
 }

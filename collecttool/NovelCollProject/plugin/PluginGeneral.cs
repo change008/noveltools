@@ -235,6 +235,7 @@ namespace NovelCollProject.plugin
                     string url = (string)cm[CollectionFieldName.Url];
                     if (!HTMLUtil.IsCorrect(url)) continue;
                     url = GetFullURL(url);
+                    cm[CollectionFieldName.Url] = url;
                     wxchapter rm = new wxchapter();
                     fillWxChapterModel(rm, cm, _CollectionModel.CollectionId);
 

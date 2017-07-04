@@ -23,15 +23,13 @@ namespace NovelCollProject
         /// "plugin1"平台的小说"乡村色情"采集对象
         /// </summary>
         public static CollectionModel model1 = new CollectionModel(
-            "web_hunhun520",
-            "http://www.hunhun520.com/book/zhanguoxiuluochuan/?chapter=", 
-            1001, 
-            "战国修罗传", 
-            @"无敌流，信长路线。
-    好吧，已经写烂的剧情又被我这没有节操的人重写了。希望这一次，咱的节操是满格状态吧。
-    各位书友要是觉得《战国修罗传》还不错的话请不要忘记向您QQ群和微博里的朋友推荐哦！战国修罗传最新章节, 战国修罗传无弹窗, 战国修罗传全文阅读.",
-            "http://www.hunhun520.com/file/novel/cover/31/31857.jpg",
-            "zhanguoxiuluochuan", 
+            "web_hkslg520",
+            "http://www.hkslg520.com/167/167695/?chapterlist", 
+            1002,
+            "春野小村医",
+            @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
+            "http://m.hkslg520.com/modules/article/images/nocover.jpg",
+            "chunyexiaocunyi", 
             "nothing");
 
         /// <summary>
