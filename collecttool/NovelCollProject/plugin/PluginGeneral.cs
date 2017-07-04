@@ -120,7 +120,7 @@ namespace NovelCollProject.plugin
                 wxchapter nextChapter = CollectionModel.GetNextChapter(this._CollectionModel.chapterList, receiveResult.maxchapterid);
                 while (nextChapter != null)
                 {
-                    int intervalX = new Random().Next(100, 3000); //每次休息一定时间
+                    int intervalX = new Random().Next(100, 500); //每次休息一定时间
                     Thread.Sleep(intervalX);
 
                     //开始采集本章节内容数据
@@ -158,7 +158,7 @@ namespace NovelCollProject.plugin
             }
             catch (Exception ex)
             {
-                Log.Show(string.Format("<C{0}> {1} error: {2}  ", _CollectionModel.CollectionId, _CollectionModel.Name, ex.Message), ConsoleColor.DarkGreen);
+                Log.Show(string.Format("<C{0}> {1} error: {2}  ", _CollectionModel.CollectionId, _CollectionModel.Name, ex.Message), ConsoleColor.DarkRed);
             }
         }
 
