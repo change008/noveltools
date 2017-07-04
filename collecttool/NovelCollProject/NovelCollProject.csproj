@@ -111,6 +111,7 @@
     <Compile Include="plugin\web_shuchu\web_xsm.cs" />
     <Compile Include="plugin\web_yakuw\web_yakuw.cs" />
     <Compile Include="plugin\web_jingcaiyuedu\web_jingcaiyuedu.cs" />
+    <Compile Include="plugin\web_yikanxiaoshuo\web_yikanxiaoshuo.cs" />
     <Compile Include="plugin\web_yxcoop\web_yxcoop.cs" />
     <Compile Include="plugin\web_bixia\web_bixia.cs" />
     <Compile Include="plugin\web_hunhun520\web_hunhun520.cs" />

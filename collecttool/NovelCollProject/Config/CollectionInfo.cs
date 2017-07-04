@@ -16,13 +16,13 @@ namespace NovelCollProject
         static CollectionInfo()
         {
             //采集信息添加到采集列表中
-            CollctionModelList.Add(model1);
+            CollctionModelList.Add(model_1004);
         }
 
         /// <summary>
-        /// "plugin1"平台的小说"乡村色情"采集对象
+        /// 春野小村医
         /// </summary>
-        public static CollectionModel model1 = new CollectionModel(
+        public static CollectionModel model_1002 = new CollectionModel(
             "web_hkslg520",
             "http://www.hkslg520.com/167/167695/?chapterlist", 
             1002,
@@ -31,6 +31,21 @@ namespace NovelCollProject
             "http://m.hkslg520.com/modules/article/images/nocover.jpg",
             "chunyexiaocunyi", 
             "nothing");
+
+        /// <summary>
+        /// 美艳冥妻
+        /// </summary>
+        public static CollectionModel model_1004 = new CollectionModel(
+            "web_yikanxiaoshuo",
+            "http://www.yikanxiaoshuo.com/yikan/337699/",
+            1004,
+            "美艳冥妻",
+            @"堂哥结婚，新娘子很漂亮，我和几个堂兄弟闹洞房的时候头脑发热做出了荒唐事，以至于喜事变成了丧事……",
+            "http://img.yikanxiaoshuo.com/337/337699/337699s.jpg",
+            "meiyanmingqi",
+            "nothing");
+        
+
 
         /// <summary>
         /// "plugin2"平台的小说"乡村色情1"采集对象
