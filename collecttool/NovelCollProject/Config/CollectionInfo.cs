@@ -16,11 +16,11 @@ namespace NovelCollProject
         static CollectionInfo()
         {
             //采集信息添加到采集列表中
-            CollctionModelList.Add(model_1004);
+            CollctionModelList.Add(model_1003);
         }
 
         /// <summary>
-        /// 春野小村医
+        /// 春野小村医_1002
         /// </summary>
         public static CollectionModel model_1002 = new CollectionModel(
             "web_hkslg520",
@@ -33,7 +33,7 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 美艳冥妻
+        /// 美艳冥妻_1004 --已完结
         /// </summary>
         public static CollectionModel model_1004 = new CollectionModel(
             "web_yikanxiaoshuo",
@@ -44,7 +44,20 @@ namespace NovelCollProject
             "http://img.yikanxiaoshuo.com/337/337699/337699s.jpg",
             "meiyanmingqi",
             "nothing");
-        
+
+
+        /// <summary>
+        /// 透视小村医_1003 --已完结
+        /// </summary>
+        public static CollectionModel model_1003 = new CollectionModel(
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/12/12122/index.html?chapterlist",
+            1003,
+            "透视小村医",
+            @"穷屌丝小农民，凭着神针入体，拥有透视功能。 从而，种田，看病，经商雄霸一方。 坐拥花丛，脚踢枭雄。 激情热血，美艳盈怀。 透视小村医，带你装比带你飞。",
+            "http://t.ziyouge.com/12/12122/12122s.jpg",
+            "toushixiaocunyi",
+            "nothing");
 
 
         /// <summary>

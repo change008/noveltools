@@ -116,6 +116,7 @@
     <Compile Include="plugin\web_bixia\web_bixia.cs" />
     <Compile Include="plugin\web_hunhun520\web_hunhun520.cs" />
     <Compile Include="plugin\web_xsm\web_xsm.cs" />
+    <Compile Include="plugin\web_ziyouge\web_ziyouge.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\DateUtil.cs" />

@@ -179,6 +179,10 @@ namespace NovelCollProject.plugin
                     }
                     Log.ShowLine(string.Format("{1}<C{0}> 没有采到内容{2}", _CollectionModel.CollectionId, _CollectionModel.Name, currenttask.Url), ConsoleColor.DarkRed);
                 }
+                else if (currenttask.PageType == PageTypeEnum.ListPage1 || currenttask.PageType == PageTypeEnum.ListPage2 || currenttask.PageType == PageTypeEnum.ListPage3)
+                    {
+                    throw new Exception("没有采集到章节数据");
+                }
                 return;
             }
 
