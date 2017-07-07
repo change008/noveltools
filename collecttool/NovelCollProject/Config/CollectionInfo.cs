@@ -61,6 +61,20 @@ namespace NovelCollProject
 
 
         /// <summary>
+        /// 小村那些事_1005 --连载中
+        /// </summary>
+        public static CollectionModel model_1005 = new CollectionModel(
+            "web_wxguan",
+            "http://www.wxguan.com/wenzhang/75/75123/?chapterlist",
+            1005,
+            "小村那些事",
+            @"自从村子里出了个杨小宝，乡村生活开始丰富了起来。比如帮寡妇马老师家里打打旱井。帮美女丽丽赶跑追求她的流氓。帮隔壁雪梅婶婶治愈多年不育的顽疾。帮村里修通了通往镇上的大路。乡亲们，姐妹们，我杨小宝来了！",
+            "http://www.wxguan.com/bookimages/75/75123/75123s.jpg",
+            "xiaocunnaxieshi",
+            "nothing");
+
+
+        /// <summary>
         /// "plugin2"平台的小说"乡村色情1"采集对象
         /// </summary>
         public static CollectionModel model2 = new CollectionModel("plugin2", "http://www.baidu.com", 1, "name", "intr", "cover", "unique", "remark");
