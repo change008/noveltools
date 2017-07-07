@@ -16,7 +16,7 @@ namespace NovelCollProject
         static CollectionInfo()
         {
             //采集信息添加到采集列表中
-            CollctionModelList.Add(model_1003);
+            CollctionModelList.Add(model_1005);
         }
 
         /// <summary>
