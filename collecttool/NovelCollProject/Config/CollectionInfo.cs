@@ -16,7 +16,8 @@ namespace NovelCollProject
         static CollectionInfo()
         {
             //采集信息添加到采集列表中
-            CollctionModelList.Add(model_1005);
+            model_1006.IsUTF8 = true;
+            CollctionModelList.Add(model_1006);
         }
 
         /// <summary>
@@ -73,11 +74,20 @@ namespace NovelCollProject
             "xiaocunnaxieshi",
             "nothing");
 
-
         /// <summary>
-        /// "plugin2"平台的小说"乡村色情1"采集对象
+        /// 妇科小村医_1006 --完结
         /// </summary>
-        public static CollectionModel model2 = new CollectionModel("plugin2", "http://www.baidu.com", 1, "name", "intr", "cover", "unique", "remark");
+        public static CollectionModel model_1006 = new CollectionModel(
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/2714.aspx?chapterlist",
+            1006,
+            "妇科小村医",
+            @"游手好闲的牛大壮意外学到了很多巫术风水等知识，从此，走上了一条风流快活的人生之路。",
+            "http://pic.quanshuwu.com/files/book/1/2714/201511071026193775.jpg",
+            "fukexiaocunyi",
+            "nothing",
+            true);
+
 
     }
 
@@ -96,7 +106,7 @@ namespace NovelCollProject
         /// <param name="coverImgs"></param>
         /// <param name="uniqueFlag"></param>
         /// <param name="remark"></param>
-        public CollectionModel(string plugin, string url, int collectionId, string name, string intr, string coverImgs, string uniqueFlag, string remark)
+        public CollectionModel(string plugin, string url, int collectionId, string name, string intr, string coverImgs, string uniqueFlag, string remark,bool isUtf8 = false)
         {
             this.Url = url;
             this.CollectionId = collectionId;
@@ -107,6 +117,7 @@ namespace NovelCollProject
             this.Remark = remark;
             this.Plugin = plugin;
             this.chapterList = new List<wxchapter>();
+            this.IsUTF8 = isUtf8;
         }
         /// <summary>
         /// url地址--代表章节列表页url地址--章节初始url列表地址
