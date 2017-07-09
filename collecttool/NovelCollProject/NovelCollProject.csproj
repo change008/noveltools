@@ -112,11 +112,13 @@
     <Compile Include="plugin\web_shuchu\web_xsm.cs" />
     <Compile Include="plugin\web_yakuw\web_yakuw.cs" />
     <Compile Include="plugin\web_jingcaiyuedu\web_jingcaiyuedu.cs" />
+    <Compile Include="plugin\web_lingyu\web_lingyu.cs" />
     <Compile Include="plugin\web_yikanxiaoshuo\web_yikanxiaoshuo.cs" />
     <Compile Include="plugin\web_yxcoop\web_yxcoop.cs" />
     <Compile Include="plugin\web_bixia\web_bixia.cs" />
     <Compile Include="plugin\web_hunhun520\web_hunhun520.cs" />
     <Compile Include="plugin\web_xsm\web_xsm.cs" />
+    <Compile Include="plugin\web_qb520\web_qb520.cs" />
     <Compile Include="plugin\web_ziyouge\web_ziyouge.cs" />
     <Compile Include="plugin\wxguan\web_wxguan.cs" />
     <Compile Include="Program.cs" />

@@ -16,8 +16,7 @@ namespace NovelCollProject
         static CollectionInfo()
         {
             //采集信息添加到采集列表中
-            model_1006.IsUTF8 = true;
-            CollctionModelList.Add(model_1006);
+            CollctionModelList.Add(model_1009);
         }
 
         /// <summary>
@@ -83,11 +82,51 @@ namespace NovelCollProject
             1006,
             "妇科小村医",
             @"游手好闲的牛大壮意外学到了很多巫术风水等知识，从此，走上了一条风流快活的人生之路。",
-            "http://pic.quanshuwu.com/files/book/1/2714/201511071026193775.jpg",
+            "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
             "fukexiaocunyi",
             "nothing",
             true);
 
+
+
+        /// <summary>
+        /// 神棍小村医_1007 --未完结
+        /// </summary>
+        public static CollectionModel model_1007 = new CollectionModel(
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/13/13066/index.html?chapterlist",
+            1007,
+            "神棍小村医",
+            @"山村少年方小宇，因砸破奇石获异能，从此精通医术、风水、看相和鉴宝。 他点中了事业桃花双旺的风水宝地。开塘办厂建电站，带领乡亲奔小康。护士警花女教师，村花校花留守妇，模特明星女老总，桃花运来挡不住……",
+            "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
+            "shengunxiaocunyi",
+            "nothing");
+
+        /// <summary>
+        /// 我把自己卖给了富婆_1008 --未完结
+        /// </summary>
+        public static CollectionModel model_1008 = new CollectionModel(
+            "web_lingyu",
+            "http://www.lingyu.org/wjsw/26/26325/?chapterlist",
+            1008,
+            "我把自己卖给了富婆",
+            @"白富美出十万想要找个傻子结婚，我为了还债被迫装傻入赘豪门。本以为婚后可以过上梦幻般的生活，可没想到，自己迎来的不是桃花，而是厄运...",
+            "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
+            "wobazijimaigeilefupo",
+            "nothing");
+
+        /// <summary>
+        /// 假面娇妻_1009 --未完结
+        /// </summary>
+        public static CollectionModel model_1009 = new CollectionModel(
+            "web_qb520",
+            "http://www.qb520.org/xiaoshuo/9/9621/?chapterlist",
+            1009,
+            "假面娇妻",
+            @"结婚纪念日妻子晚归，李泽发现了妻子身上的异常。而当李泽确定妻子不仅在上班期间洗过澡，而且身上还少了某样东西时，李泽意识到妻子可能已经出轨……",
+            "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
+            "jiamianjiaoqi",
+            "nothing");
 
     }
 
