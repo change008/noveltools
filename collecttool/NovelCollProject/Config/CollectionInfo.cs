@@ -16,6 +16,11 @@ namespace NovelCollProject
         static CollectionInfo()
         {
             //采集信息添加到采集列表中
+            CollctionModelList.Add(model_1002);
+            CollctionModelList.Add(model_1005);
+            CollctionModelList.Add(model_1006);
+            CollctionModelList.Add(model_1007);
+            CollctionModelList.Add(model_1008);
             CollctionModelList.Add(model_1009);
         }
 
@@ -61,15 +66,15 @@ namespace NovelCollProject
 
 
         /// <summary>
-        /// 小村那些事_1005 --连载中
+        /// 小村那些事_1005 --连载中 //"http://www.wxguan.com/wenzhang/75/75123/?chapterlist",
         /// </summary>
         public static CollectionModel model_1005 = new CollectionModel(
-            "web_wxguan",
-            "http://www.wxguan.com/wenzhang/75/75123/?chapterlist",
+            "web_lwxs",
+            "http://www.lwxs.com/shu/41/41439/?chapterlist",  
             1005,
             "小村那些事",
             @"自从村子里出了个杨小宝，乡村生活开始丰富了起来。比如帮寡妇马老师家里打打旱井。帮美女丽丽赶跑追求她的流氓。帮隔壁雪梅婶婶治愈多年不育的顽疾。帮村里修通了通往镇上的大路。乡亲们，姐妹们，我杨小宝来了！",
-            "http://www.wxguan.com/bookimages/75/75123/75123s.jpg",
+            "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
             "xiaocunnaxieshi",
             "nothing");
 
@@ -127,6 +132,11 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
             "jiamianjiaoqi",
             "nothing");
+
+
+
+
+
 
     }
 
