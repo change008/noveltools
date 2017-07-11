@@ -185,18 +185,21 @@ namespace NovelCollProject.plugin.web_lingyu
                 //tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
                 tempString = tempString.Replace("\r\n", "")
                     .Replace("\t", "")
-                    .Replace("領域文學首發地址httP://ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ", "")
-                    .Replace("領域文學首發地址ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ<br><br>　　<br><br>　　　　http://www.lingyu.org/wjsw/26/26325/8199722.html<br><br>　　请记住本书首发域名：http://www.lingyu.org&nbsp;&nbsp;领域文学手机版阅读网址： m.lingyu.org", "")
-                    .Replace("更多精彩请到:ｗwｗ.ｓｈuｃoｎｇ.ｃoｍ", "");
+                    .Replace("領域文學首發地址httP://ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ<br><br>", "")
+                    .Replace("領域文學首發地址ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ<br><br>　　<br><br>", "")
+                    .Replace("请记住本书首发域名：http://www.lingyu.org&nbsp;&nbsp;领域文学手机版阅读网址： m.lingyu.org", "");
 
+                string pattern = @"http://www.lingyu.org/\w+/\d+/\d+/\d+.html";
+                tempString = Regex.Replace(tempString, pattern, "");
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
+
 
                 //移除无效字符,用来计算长度
                 tempInnerText = HTMLUtil.RemoveHtmlTag(tempString)
                     .Replace("&nbsp;", "")
-                    .Replace("領域文學首發地址httP://ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ", "")
-                    .Replace("領域文學首發地址ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ<br><br>　　<br><br>　　　　http://www.lingyu.org/wjsw/26/26325/8199722.html<br><br>　　请记住本书首发域名：http://www.lingyu.org&nbsp;&nbsp;领域文学手机版阅读网址： m.lingyu.org", "")
-                    .Replace("更多精彩请到:ｗwｗ.ｓｈuｃoｎｇ.ｃoｍ", "");
+                    .Replace("領域文學首發地址httP://ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ<br><br>", "")
+                    .Replace("領域文學首發地址ｗｗｗ.ｌｉｎｇｙｕ.ｏｒｇ<br><br>　　<br><br>", "")
+                    .Replace("请记住本书首发域名：http://www.lingyu.org&nbsp;&nbsp;领域文学手机版阅读网址： m.lingyu.org", "");
 
                 if (!string.IsNullOrEmpty(tempInnerText))
                 {
