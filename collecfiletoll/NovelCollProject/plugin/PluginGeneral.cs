@@ -62,6 +62,10 @@ namespace NovelCollProject.plugin
         /// </summary>
         public string BaseUrl;
 
+        /// <summary>
+        /// 类别名称
+        /// </summary>
+        public string sortName;
 
 
         /// <summary>
@@ -90,6 +94,10 @@ namespace NovelCollProject.plugin
                     int interval2 = new Random().Next(interval - step, interval + step);
                     Thread.Sleep(interval2);
                 }
+
+                Thread.Sleep(30 * 1000);
+
+
                 //采集图书基本信息数据/ id,标题,简介
                 currenttask.Url = BaseUrl;
                 currenttask.PageType = PageTypeEnum.StartupPage;
@@ -101,8 +109,8 @@ namespace NovelCollProject.plugin
 
 
                 //写文件name和intro
-                LocalFileIO.writeName(this._CollectionModel.Name);
-                LocalFileIO.writeIntro(this._CollectionModel.Name, this._CollectionModel.Intr);
+                LocalFileIO.writeName(this._CollectionModel.Name, this.sortName);
+                LocalFileIO.writeIntro(this._CollectionModel.Name, this._CollectionModel.Intr, this.sortName);
 
 
 
@@ -123,7 +131,7 @@ namespace NovelCollProject.plugin
                 //章节列表数据采集完成---请求我们的图书数据,查看当前我们自己线上数据中图书章节状态信息
                 foreach (var item in this._CollectionModel.chapterList)
                 {
-                    int intervalX = new Random().Next(100, 500); //每次休息一定时间
+                    int intervalX = new Random().Next(10 * 1000, 60 * 1000); //每次休息一定时间
                     Thread.Sleep(intervalX);
 
                     //开始采集本章节内容数据
@@ -146,7 +154,7 @@ namespace NovelCollProject.plugin
                         .Replace("&nbsp;", " ")
                         ;
 
-                    LocalFileIO.writeChpater(this._CollectionModel.Name, item.Title, realcontent);
+                    LocalFileIO.writeChpater(this._CollectionModel.Name, item.Title, realcontent, this.sortName);
 
                     Log.Show(string.Format("<C> {0} 写入章节数据: {1}  ",  _CollectionModel.Name, item.Title), ConsoleColor.DarkGreen);
 

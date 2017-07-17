@@ -8,6 +8,9 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections;
+using System.Text.RegularExpressions;
+using HtmlAgilityPack;
 
 namespace NovelCollProject
 {
@@ -115,15 +118,29 @@ namespace NovelCollProject
 
         /******************************************/
 
+
+
         /// <summary>
         /// 执行采集操作
         /// </summary>
         /// <param name="ids"></param>
         private static void doCollection(string[] ids)
         {
-            foreach (var item in CollectionInfo.CollctionModelList)
+            //foreach (var item in CollectionInfo.CollctionModelList)
+            //{
+            //    ParameterizedThreadStart parStart = new ParameterizedThreadStart(_startCollectionTask);
+            //    Thread worker1 = new Thread(parStart);
+            //    worker1.Name = "采集器（ID=" + item + "）";
+            //    worker1.IsBackground = true;
+            //    worker1.Start(item);
+
+            //    Thread.Sleep(interval);
+            //}
+
+
+            foreach (var item in CollectionInfo.collectionSortDic)
             {
-                ParameterizedThreadStart parStart = new ParameterizedThreadStart(_startCollectionTask);
+                ParameterizedThreadStart parStart = new ParameterizedThreadStart(_startCollectionTaskSort);
                 Thread worker1 = new Thread(parStart);
                 worker1.Name = "采集器（ID=" + item + "）";
                 worker1.IsBackground = true;
@@ -133,6 +150,49 @@ namespace NovelCollProject
             }
         }
 
+        /// <summary>
+        /// 启动去采集单本书
+        /// </summary>
+        /// <param name="url"></param>
+        private static void _startCollectionTaskSort(object o)
+        {
+            KeyValuePair<string, string> pair = (KeyValuePair<string, string>)o;
+            string sortUrl = pair.Key;
+            string sortName = pair.Value;
+
+            //读取分类下的数据,提取分类里的url信息
+            URLLoader UrlLoader = new URLLoader();
+            var result = UrlLoader.RequestByGBK(sortUrl);
+
+            HtmlDocument document = new HtmlDocument();
+            document.LoadHtml(result);
+            var documentNode = document.DocumentNode;
+
+
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@class='title-info']/h2");
+
+            List<string> list = new List<string>();
+
+            foreach (var liNode in linkNodes)
+            {
+                var title = liNode.SelectSingleNode("a")?.InnerText;
+                var url = liNode.SelectSingleNode("a")?.GetAttributeValue("href", "");
+                list.Add(url);
+            }
+
+
+            foreach (var item in list)
+            {
+                WorkerController controller = new WorkerController(sortName, item);
+                controller.Execute(interval);
+            }
+        }
+
+
+        /// <summary>
+        /// 启动去采集单本书
+        /// </summary>
+        /// <param name="url"></param>
         private static void _startCollectionTask(object url)
         {
             WorkerController controller = new WorkerController(url.ToString());

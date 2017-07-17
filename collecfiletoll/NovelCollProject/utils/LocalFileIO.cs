@@ -37,15 +37,15 @@ namespace NovelCollProjectutils
         }
 
         //路径位置
-        const string basePath = "d:\\xiaoshuo\\{0}.txt";
+        const string basePath = "d:\\xiaoshuo\\{1}\\{0}.txt";
 
         /// <summary>
         /// 书名
         /// </summary>
         /// <param name="name"></param>
-        public static void writeName(string name)
+        public static void writeName(string name, string sortName)
         {
-            string path = string.Format(basePath, name);
+            string path = string.Format(basePath, name, sortName);
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(name).AppendLine().AppendLine();
             writeToLocal(path, sb.ToString(), FileMode.Create);      
@@ -56,9 +56,9 @@ namespace NovelCollProjectutils
         /// </summary>
         /// <param name="name"></param>
         /// <param name="intro"></param>
-        public static void writeIntro(string name, string intro)
+        public static void writeIntro(string name, string intro, string sortName)
         {
-            string path = string.Format(basePath, name);
+            string path = string.Format(basePath, name, sortName);
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(intro);
             sb.AppendLine();
@@ -67,9 +67,9 @@ namespace NovelCollProjectutils
         }
 
 
-        public static void writeChpater(string name, string chapterTitle, string chapterContent)
+        public static void writeChpater(string name, string chapterTitle, string chapterContent, string sortName)
         {
-            string path = string.Format(basePath, name);
+            string path = string.Format(basePath, name, sortName);
             StringBuilder sb = new StringBuilder();
             sb.AppendLine();
             sb.AppendLine();

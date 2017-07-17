@@ -50,6 +50,18 @@ namespace NovelCollProject.control
             plugin.CurrentUrl_ChapterList = url;
         }
 
+        public WorkerController(string sortName, string url)
+        {
+            //采集插件
+            plugin = new PluginGeneral(Type.GetType("NovelCollProject.plugin.web_ziyouge.Page"));
+            plugin.BaseUrl = url;
+            plugin.sortName = sortName;
+            plugin.CurrentUrl_ChapterList = url;
+        }
+
+
+
+
 
         /// <summary>
         /// 执行操作

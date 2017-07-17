@@ -126,6 +126,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\DateUtil.cs" />
     <Compile Include="utils\HTMLUtil.cs" />
+    <Compile Include="utils\HttpUtil.cs" />
     <Compile Include="utils\ImgUtil.cs" />
     <Compile Include="utils\LocalFileIO.cs" />
     <Compile Include="utils\LocalizationImg.cs" />

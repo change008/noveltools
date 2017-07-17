@@ -22,6 +22,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1007);
             CollctionModelList.Add(model_1008);
             CollctionModelList.Add(model_1009);
+            CollctionModelList.Add(model_1010);
         }
 
         /// <summary>
@@ -133,7 +134,18 @@ namespace NovelCollProject
             "jiamianjiaoqi",
             "nothing");
 
-
+        /// <summary>
+        /// 我在殡仪馆工作的那些事_1010 --未完结
+        /// </summary>
+        public static CollectionModel model_1010 = new CollectionModel(
+            "web_shumanwu",
+            "http://www.shumanwu.net/1/1888/index.html?chapterlist",
+            1010,
+            "神秘殡仪馆的一些事",
+            @"有一天殡仪馆里来了一具身名牌的漂亮女尸，我把这套香奈儿偷了回去，送给了女朋友，接着，一连串的邪门事情发生了……接连的死亡，一步步逼近我跟大胖，我们又该如何逃脱死神的追逐？",
+            "http://www.shumanwu.net/files/article/image//1/1888/1888s.jpg",
+            "shenmibinyiguan",
+            "nothing");
 
 
 
