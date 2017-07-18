@@ -108,6 +108,7 @@
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
     <Compile Include="plugin\web_hkslg520\web_hkslg520.cs" />
+    <Compile Include="plugin\web_qqkanshu\web_qqkanshu.cs" />
     <Compile Include="plugin\web_lwxs\web_lwxs.cs" />
     <Compile Include="plugin\web_quanshuwu\web_quanshuwu.cs" />
     <Compile Include="plugin\web_shuchu\web_xsm.cs" />
@@ -122,7 +123,7 @@
     <Compile Include="plugin\web_qb520\web_qb520.cs" />
     <Compile Include="plugin\web_shumanwu\web_shumanwu.cs" />
     <Compile Include="plugin\web_ziyouge\web_ziyouge.cs" />
-    <Compile Include="plugin\wxguan\web_wxguan.cs" />
+    <Compile Include="plugin\web_wxguan\web_wxguan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\DateUtil.cs" />

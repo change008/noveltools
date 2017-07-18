@@ -23,6 +23,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1008);
             CollctionModelList.Add(model_1009);
             CollctionModelList.Add(model_1010);
+            CollctionModelList.Add(model_1011);
         }
 
         /// <summary>
@@ -147,7 +148,18 @@ namespace NovelCollProject
             "shenmibinyiguan",
             "nothing");
 
-
+        /// <summary>
+        /// 堕落女友_1011 --已完结
+        /// </summary>
+        public static CollectionModel model_1011 = new CollectionModel(
+            "web_qqkanshu",
+            "http://www.qqkanshu.com/duoluonvyou/?chapterlist",
+            1011,
+            "沉沦的女友",
+            @"我们的感情历经坎坷与猜忌，在不断成熟起来的年纪，我跟女友的感情是不是能够在这种纸醉金迷的世界中义无反顾的走下去，这不是我与女友感情的磨难，更是对现实与世界的抗争。",
+            "http://www.qqkanshu//uploads/temp/wd/duoluonvyou.png",
+            "chenlunnvyou",
+            "nothing");
 
 
     }
