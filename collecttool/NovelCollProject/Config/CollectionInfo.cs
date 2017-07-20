@@ -173,17 +173,17 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 堕落女友_1012 --已完结
+        /// 今晚有料_1012 --连载中, 原今夜有戏
         /// </summary>
         public static CollectionModel model_1012 = new CollectionModel(
-            2,
-            "web_qqkanshu",
-            "http://www.qqkanshu.com/duoluonvyou/?chapterlist",
+            1,
+            "web_51cxw",
+            "http://www.51cxw.cn/cxw7195/?chapterlist",
             1012,
-            "沉沦的女友1",
-            @"我们的感情历经坎坷与猜忌，在不断成熟起来的年纪，我跟女友的感情是不是能够在这种纸醉金迷的世界中义无反顾的走下去，这不是我与女友感情的磨难，更是对现实与世界的抗争。",
-            "http://www.qqkanshu//uploads/temp/wd/duoluonvyou.png",
-            "chenlunnvyou",
+            "今晚有料",
+            @"因为尴尬的事情，我装作聋哑人做了上门女婿。    各位书友要是觉得《今夜有戏》还不错的话请不要忘记向您QQ群和微博里的朋友推荐哦！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "jinwanyouliao",
             "nothing");
 
 

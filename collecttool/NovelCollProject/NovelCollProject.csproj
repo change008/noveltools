@@ -108,6 +108,7 @@
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
     <Compile Include="plugin\web_hkslg520\web_hkslg520.cs" />
+    <Compile Include="plugin\web_51cxw\web_51cxw.cs" />
     <Compile Include="plugin\web_qqkanshu\web_qqkanshu.cs" />
     <Compile Include="plugin\web_lwxs\web_lwxs.cs" />
     <Compile Include="plugin\web_quanshuwu\web_quanshuwu.cs" />
