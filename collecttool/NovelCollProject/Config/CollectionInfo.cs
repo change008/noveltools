@@ -17,6 +17,8 @@ namespace NovelCollProject
         {
             //采集信息添加到采集列表中
             CollctionModelList.Add(model_1002);
+            CollctionModelList.Add(model_1003);
+            CollctionModelList.Add(model_1004);
             CollctionModelList.Add(model_1005);
             CollctionModelList.Add(model_1006);
             CollctionModelList.Add(model_1007);
@@ -24,12 +26,14 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1009);
             CollctionModelList.Add(model_1010);
             CollctionModelList.Add(model_1011);
+            CollctionModelList.Add(model_1012);
         }
 
         /// <summary>
-        /// 春野小村医_1002
+        /// 春野小村医_1002 连载中 
         /// </summary>
         public static CollectionModel model_1002 = new CollectionModel(
+            1,
             "web_hkslg520",
             "http://www.hkslg520.com/167/167695/?chapterlist", 
             1002,
@@ -40,23 +44,10 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 美艳冥妻_1004 --已完结
-        /// </summary>
-        public static CollectionModel model_1004 = new CollectionModel(
-            "web_yikanxiaoshuo",
-            "http://www.yikanxiaoshuo.com/yikan/337699/",
-            1004,
-            "美艳冥妻",
-            @"堂哥结婚，新娘子很漂亮，我和几个堂兄弟闹洞房的时候头脑发热做出了荒唐事，以至于喜事变成了丧事……",
-            "http://img.yikanxiaoshuo.com/337/337699/337699s.jpg",
-            "meiyanmingqi",
-            "nothing");
-
-
-        /// <summary>
         /// 透视小村医_1003 --已完结
         /// </summary>
         public static CollectionModel model_1003 = new CollectionModel(
+            2,
             "web_ziyouge",
             "http://www.ziyouge.com/zy/12/12122/index.html?chapterlist",
             1003,
@@ -66,11 +57,25 @@ namespace NovelCollProject
             "toushixiaocunyi",
             "nothing");
 
+        /// <summary>
+        /// 美艳冥妻_1004 --已完结
+        /// </summary>
+        public static CollectionModel model_1004 = new CollectionModel(
+            2,
+            "web_yikanxiaoshuo",
+            "http://www.yikanxiaoshuo.com/yikan/337699/",
+            1004,
+            "美艳冥妻",
+            @"堂哥结婚，新娘子很漂亮，我和几个堂兄弟闹洞房的时候头脑发热做出了荒唐事，以至于喜事变成了丧事……",
+            "http://img.yikanxiaoshuo.com/337/337699/337699s.jpg",
+            "meiyanmingqi",
+            "nothing");
 
         /// <summary>
         /// 小村那些事_1005 --连载中 //"http://www.wxguan.com/wenzhang/75/75123/?chapterlist",
         /// </summary>
         public static CollectionModel model_1005 = new CollectionModel(
+            1,
             "web_lwxs",
             "http://www.lwxs.com/shu/41/41439/?chapterlist",  
             1005,
@@ -81,9 +86,10 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 妇科小村医_1006 --完结
+        /// 妇科小村医_1006 --已完结
         /// </summary>
         public static CollectionModel model_1006 = new CollectionModel(
+            2,
             "web_quanshuwu",
             "http://www.quanshuwu.com/book/2714.aspx?chapterlist",
             1006,
@@ -100,6 +106,7 @@ namespace NovelCollProject
         /// 神棍小村医_1007 --未完结
         /// </summary>
         public static CollectionModel model_1007 = new CollectionModel(
+            1,
             "web_ziyouge",
             "http://www.ziyouge.com/zy/13/13066/index.html?chapterlist",
             1007,
@@ -113,6 +120,7 @@ namespace NovelCollProject
         /// 我把自己卖给了富婆_1008 --未完结
         /// </summary>
         public static CollectionModel model_1008 = new CollectionModel(
+            1,
             "web_lingyu",
             "http://www.lingyu.org/wjsw/26/26325/?chapterlist",
             1008,
@@ -126,6 +134,7 @@ namespace NovelCollProject
         /// 假面娇妻_1009 --未完结
         /// </summary>
         public static CollectionModel model_1009 = new CollectionModel(
+            1,
             "web_qb520",
             "http://www.qb520.org/xiaoshuo/9/9621/?chapterlist",
             1009,
@@ -139,6 +148,7 @@ namespace NovelCollProject
         /// 我在殡仪馆工作的那些事_1010 --未完结
         /// </summary>
         public static CollectionModel model_1010 = new CollectionModel(
+            1,
             "web_shumanwu",
             "http://www.shumanwu.net/1/1888/index.html?chapterlist",
             1010,
@@ -152,6 +162,7 @@ namespace NovelCollProject
         /// 堕落女友_1011 --已完结
         /// </summary>
         public static CollectionModel model_1011 = new CollectionModel(
+            2,
             "web_qqkanshu",
             "http://www.qqkanshu.com/duoluonvyou/?chapterlist",
             1011,
@@ -160,6 +171,22 @@ namespace NovelCollProject
             "http://www.qqkanshu//uploads/temp/wd/duoluonvyou.png",
             "chenlunnvyou",
             "nothing");
+
+        /// <summary>
+        /// 堕落女友_1012 --已完结
+        /// </summary>
+        public static CollectionModel model_1012 = new CollectionModel(
+            2,
+            "web_qqkanshu",
+            "http://www.qqkanshu.com/duoluonvyou/?chapterlist",
+            1012,
+            "沉沦的女友1",
+            @"我们的感情历经坎坷与猜忌，在不断成熟起来的年纪，我跟女友的感情是不是能够在这种纸醉金迷的世界中义无反顾的走下去，这不是我与女友感情的磨难，更是对现实与世界的抗争。",
+            "http://www.qqkanshu//uploads/temp/wd/duoluonvyou.png",
+            "chenlunnvyou",
+            "nothing");
+
+
 
 
     }
@@ -179,8 +206,9 @@ namespace NovelCollProject
         /// <param name="coverImgs"></param>
         /// <param name="uniqueFlag"></param>
         /// <param name="remark"></param>
-        public CollectionModel(string plugin, string url, int collectionId, string name, string intr, string coverImgs, string uniqueFlag, string remark,bool isUtf8 = false)
+        public CollectionModel(int status, string plugin, string url, int collectionId, string name, string intr, string coverImgs, string uniqueFlag, string remark,bool isUtf8 = false)
         {
+            this.status = status;
             this.Url = url;
             this.CollectionId = collectionId;
             this.Name = name;
@@ -192,6 +220,12 @@ namespace NovelCollProject
             this.chapterList = new List<wxchapter>();
             this.IsUTF8 = isUtf8;
         }
+
+        /// <summary>
+        /// status 状态0:未上线, 1:连载中, 2:已完结, 
+        /// </summary>
+        public int status { get; set; }
+
         /// <summary>
         /// url地址--代表章节列表页url地址--章节初始url列表地址
         /// </summary>

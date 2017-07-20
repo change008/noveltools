@@ -299,6 +299,7 @@ namespace NovelCollProject.plugin
             if (source.ContainsKey(CollectionFieldName.Chap_Title)) cm.Title = (string)source[CollectionFieldName.Chap_Title];
             if (source.ContainsKey(CollectionFieldName.Chap_ChapterType)) cm.ChapterType = (int)source[CollectionFieldName.Chap_ChapterType];
             if (source.ContainsKey(CollectionFieldName.Chap_Pirce)) cm.Pirce = (int)source[CollectionFieldName.Chap_Pirce];
+
             //if (source.ContainsKey(CollectionFieldName.Chap_Remark)) cm.Remark = (string)source[CollectionFieldName.Chap_Remark];
             if (source.ContainsKey(CollectionFieldName.Chap_Content)) cm.Content = (string)source[CollectionFieldName.Chap_Content];
             //if (source.ContainsKey(CollectionFieldName.Chap_Status)) cm.Status = (int)source[CollectionFieldName.Chap_Status];
@@ -307,6 +308,14 @@ namespace NovelCollProject.plugin
             //章节对应的章节内容地址
             if (source.ContainsKey(CollectionFieldName.Url)) cm.chapterUrl = (string)source[CollectionFieldName.Url];
             cm.CollectionId = collectionId;
+
+
+            //在最后统一计算阅读价格,500字3分钱
+            int price = (cm.ContentLen / 500) * 3;
+            if (price > 15)
+                price = 15;
+            cm.Pirce = price;
+           
         }
 
 

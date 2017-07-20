@@ -208,9 +208,7 @@ namespace NovelCollProject.plugin.web_qqkanshu
                         into = tempInnerText;
                     }
                     returndata.Add(CollectionFieldName.Chap_Intro, into);
-                    int price = (tempString.Length / 1000) * 5;
-                    if (price == 0)
-                        price = 5;
+                    int price = (tempInnerText.Length / 500) * 3;
                     if (price > 15)
                         price = 15;
                     returndata.Add(CollectionFieldName.Chap_Pirce, price);
