@@ -22,18 +22,20 @@ namespace NovelCollProjectutils
 
         public static void Show(object info)
         {
-            object t = TIME + info;
-            Console.Write(t);
-            
-            if (GetInstance().OnLogText != null) GetInstance().OnLogText(t as string);
-            if (OutputFilePath != null) LocalFileIO.AppendAsUTF8(OutputFilePath, t.ToString());
+            ShowLine(info);
+            //object t = TIME + info;
+            //Console.Write(t);
+
+            //if (GetInstance().OnLogText != null) GetInstance().OnLogText(t as string);
+            //if (OutputFilePath != null) LocalFileIO.AppendAsUTF8(OutputFilePath, t.ToString());
         }
 
         public static void Show(object info, ConsoleColor fontColor)
         {
-            Console.ForegroundColor = fontColor;
-            Show(info);
-            Console.ResetColor();
+            ShowLine(info, fontColor);
+            //Console.ForegroundColor = fontColor;
+            //Show(info);
+            //Console.ResetColor();
         }
 
         public static void ShowLine(object info)
