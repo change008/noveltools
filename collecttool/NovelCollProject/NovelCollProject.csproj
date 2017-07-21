@@ -107,6 +107,7 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_ybdu\web_ybdu.cs" />
     <Compile Include="plugin\web_126shu\web_126shu.cs" />
     <Compile Include="plugin\web_hkslg520\web_hkslg520.cs" />
     <Compile Include="plugin\web_51cxw\web_51cxw.cs" />

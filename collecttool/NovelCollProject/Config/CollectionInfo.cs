@@ -28,6 +28,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1011);
             CollctionModelList.Add(model_1012);
             CollctionModelList.Add(model_1013);
+            CollctionModelList.Add(model_1014);
         }
 
         /// <summary>
@@ -199,6 +200,20 @@ namespace NovelCollProject
             @"感谢青春，让我在一无所有的年纪，遇到了青春靓丽的你。 ",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "ganxieqingchun",
+            "nothing");
+
+        /// <summary>
+        /// 多娇山村_1014 --已完结, 原白姐
+        /// </summary>
+        public static CollectionModel model_1014 = new CollectionModel(
+            2,
+            "web_ybdu",
+            "http://www.ybdu.com/xiaoshuo/18/18562/?chapterlist",
+            1014,
+            "多娇山村",
+            @"他是一个小农民，他艳福不浅，美女、熟妇纷至沓来。他外表憨厚，却独具野心，他财运滚滚，赚钱赚到手发软。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "duojiaoshancun",
             "nothing");
 
 
