@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_hkslg520
+namespace NovelCollProject.plugin.web_126shu
 {
     class Page : PageBase
     {
@@ -27,9 +27,9 @@ namespace NovelCollProject.plugin.web_hkslg520
         /// <param name="pageFeature"></param>
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
-            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:hkslg520.com/nonono$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:hkslg520.com/\d+/\d+/\?chapterlist");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:hkslg520.com/\d+/\d+/\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:126shu.com/nonono$");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:126shu.com/\d+/\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:126shu.com/\d+/\d+.html");
             //pageFeature.InjectUrlRule(PageTypeEnum.DetailPage2, @"REG:hkslg520.com/\d+/\d+/\d+_\d+.html");
         }
 
@@ -86,11 +86,10 @@ namespace NovelCollProject.plugin.web_hkslg520
             {
                 var tag = linkNodes?.GetAttributeValue("content", "");
                 ht.Add(CollectionFieldName.Novel_Tag, tag);
-            }
-           
+            }    
             var url = InternalRealUrl + "?chapter=";
             ht.Add(CollectionFieldName.Url, url);
-           
+
             tempReg = new Regex(@"/(\w+)/$");
             tempMatch = tempReg.Match(InternalRealUrl);
             if (tempMatch.Success)
@@ -114,7 +113,7 @@ namespace NovelCollProject.plugin.web_hkslg520
             List<string> multipage = null;
             Regex reg;
             Match m;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@class=\"dccss\"]");
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@id=\"list\"]/dl/dd");
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();
@@ -170,19 +169,28 @@ namespace NovelCollProject.plugin.web_hkslg520
             string tempInnerText = null;
             Regex tempReg = null;
             Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id='content']/p");
+            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
                 tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script");
-                //tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "").Replace("手机请访问：:feisuz", "")
-                    .Replace("feisuz", "").Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
+
+                tempString = tempString.Replace("\r\n", "").Replace("\t", "");
+
+                //正则替换
+                string pattern = @"www\.[a-zA-Z0-9]+\.(?:com|cn|net|org)/(\w+|/)+\.html";
+                tempString = Regex.Replace(tempString, pattern, "");
+
+                string pattern1 = @"www\.[a-zA-Z0-9]+\.(?:com|cn|net|org)/(\w+|/)+";
+                tempString = Regex.Replace(tempString, pattern1, "");
+
+                string pattern2 = @"www\.[a-zA-Z0-9]+\.(?:com|cn|net|org)/?";
+                tempString = Regex.Replace(tempString, pattern2, "");
+
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
 
                 //移除无效字符,用来计算长度
-                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "").Replace("feisuz", "")
-                    .Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
+                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "");
                 if (!string.IsNullOrEmpty(tempInnerText))
                 {
                     returndata.Add(CollectionFieldName.Chap_ContentLen, tempInnerText.Length);

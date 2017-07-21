@@ -27,6 +27,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1010);
             CollctionModelList.Add(model_1011);
             CollctionModelList.Add(model_1012);
+            CollctionModelList.Add(model_1013);
         }
 
         /// <summary>
@@ -186,7 +187,19 @@ namespace NovelCollProject
             "jinwanyouliao",
             "nothing");
 
-
+        /// <summary>
+        /// 感谢青春_1013 --已完结, 原白姐
+        /// </summary>
+        public static CollectionModel model_1013 = new CollectionModel(
+            2,
+            "web_126shu",
+            "http://www.126shu.com/65549/?chapterlist",
+            1013,
+            "感谢青春",
+            @"感谢青春，让我在一无所有的年纪，遇到了青春靓丽的你。 ",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "ganxieqingchun",
+            "nothing");
 
 
     }
