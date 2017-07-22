@@ -203,7 +203,7 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 多娇山村_1014 --已完结, 原白姐
+        /// 多娇山村_1014 --已完结, 
         /// </summary>
         public static CollectionModel model_1014 = new CollectionModel(
             2,
