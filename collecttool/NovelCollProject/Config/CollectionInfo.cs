@@ -29,6 +29,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1012);
             CollctionModelList.Add(model_1013);
             CollctionModelList.Add(model_1014);
+            CollctionModelList.Add(model_1015);
         }
 
         /// <summary>
@@ -214,6 +215,20 @@ namespace NovelCollProject
             @"他是一个小农民，他艳福不浅，美女、熟妇纷至沓来。他外表憨厚，却独具野心，他财运滚滚，赚钱赚到手发软。",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "duojiaoshancun",
+            "nothing");
+
+        /// <summary>
+        /// 血色爱恋 原名 血色浪漫_1015 --已完结, 
+        /// </summary>
+        public static CollectionModel model_1015 = new CollectionModel(
+            2,
+            "web_yrnew",
+            "http://www.yrnew.net/plugin.php?id=jameson_read&contrl=index&act=book&book_id=66",
+            1015,
+            "血色爱恋",
+            @"十八岁之前，我过着非人的生活，直到尊严被极度践踏的生日夜…… 我努力冲向未来……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "xueseailian",
             "nothing");
 
 
