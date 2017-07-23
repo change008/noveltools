@@ -107,6 +107,7 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_ouoou\web_ouoou.cs" />
     <Compile Include="plugin\web_lwtxt\web_lwtxt.cs" />
     <Compile Include="plugin\web_qb5200\web_qb5200.cs" />
     <Compile Include="plugin\web_yrnew\web_yrnew.cs" />

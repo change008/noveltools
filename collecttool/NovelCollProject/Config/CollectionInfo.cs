@@ -32,6 +32,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1015);
             CollctionModelList.Add(model_1016);
             CollctionModelList.Add(model_1017);
+            CollctionModelList.Add(model_1018);
         }
 
         #region 采集小说配置
@@ -250,7 +251,7 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 生态园里的爱恋 原名 寡嫂_1017 --已完结, 
+        /// 生态园里的爱恋 原名 寡嫂_1017 --连载中, 
         /// </summary>
         public static CollectionModel model_1017 = new CollectionModel(
             1,
@@ -262,6 +263,20 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "shengtaiyuan",
             "nothing");
+
+        /// <summary>
+        /// 同居日记 原名 和小姨子同居的日子_1018--连载中, 
+        /// </summary>
+        public static CollectionModel model_1018 = new CollectionModel(
+            1,
+            "web_ouoou",
+            "http://www.ouoou.com/ou_26704/?chapterlist",
+            1018,
+            "同居日记",
+            @"周末的早晨我接到一个陌生女孩的来电，电话那头女孩的声音特别软，她自称是我的小姨子，女孩还说让我去机场接她！于是我就开车去了机场，谁料半路竟然下起了暴雨。机场门口我见到了给我打电话的女孩，她穿着湿漉漉的衣服就钻进了我的车里……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "tongjuriji",
+            "nothing",true);
 
 
     }
