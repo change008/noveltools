@@ -73,6 +73,8 @@ namespace NovelCollProject.plugin
             currenttask.SetUserAgent(URLLoader.USERAGENT_PC_CHROME);
         }
 
+        int retryTimes = 0;
+
         /// <summary>
         /// 实际执行操作
         /// </summary>
@@ -117,32 +119,49 @@ namespace NovelCollProject.plugin
                     throw new Exception("线上图书信息不存在");
                 }
 
+
                 wxchapter nextChapter = CollectionModel.GetNextChapter(this._CollectionModel.chapterList, receiveResult.maxchapterid);
                 while (nextChapter != null)
                 {
-                    int intervalX = new Random().Next(100, 500); //每次休息一定时间
-                    Thread.Sleep(intervalX);
-
-                    //开始采集本章节内容数据
-                    this.currentUrl_ChapterDetail = nextChapter.chapterUrl;
-                    while (!string.IsNullOrEmpty(this.currentUrl_ChapterDetail))
+                    try
                     {
-                        currenttask.Url = this.currentUrl_ChapterDetail;
-                        //currenttask.DoChapterDetail(_CollectionModel.IsUTF8);
-                        currenttask.Load(_CollectionModel.IsUTF8);
+                        retryTimes = 0;
 
-                        //采集完成后的操作--数据填充到Model中去
-                        buildModel(nextChapter);
+                        int intervalX = new Random().Next(100, 500); //每次休息一定时间
+                        Thread.Sleep(intervalX);
+
+                        //开始采集本章节内容数据
+                        this.currentUrl_ChapterDetail = nextChapter.chapterUrl;
+                        while (!string.IsNullOrEmpty(this.currentUrl_ChapterDetail))
+                        {
+                            currenttask.Url = this.currentUrl_ChapterDetail;
+                            //currenttask.DoChapterDetail(_CollectionModel.IsUTF8);
+                            currenttask.Load(_CollectionModel.IsUTF8);
+
+                            //采集完成后的操作--数据填充到Model中去
+                            buildModel(nextChapter);
+                        }
+
+                        publishBiz.doSubmitChapter(nextChapter);
+
+
+                        Log.Show(string.Format("<C{0}> {1} 灌入章节数据: {2}  ", _CollectionModel.CollectionId, _CollectionModel.Name, nextChapter.Title), ConsoleColor.DarkGreen);
+
+                        //再次获取线上图书状态数据
+                        receiveResult = publishBiz.doGetBookInfo(this._CollectionModel.CollectionId);
+                        nextChapter = CollectionModel.GetNextChapter(this._CollectionModel.chapterList, receiveResult.maxchapterid);
+
                     }
-
-                    publishBiz.doSubmitChapter(nextChapter);
-
-
-                    Log.Show(string.Format("<C{0}> {1} 灌入章节数据: {2}  ", _CollectionModel.CollectionId, _CollectionModel.Name, nextChapter.Title), ConsoleColor.DarkGreen);
-
-                    //再次获取线上图书状态数据
-                    receiveResult = publishBiz.doGetBookInfo(this._CollectionModel.CollectionId);
-                    nextChapter = CollectionModel.GetNextChapter(this._CollectionModel.chapterList, receiveResult.maxchapterid);
+                    catch (Exception exChapter)
+                    {
+                        Log.Show(string.Format("<C{0}> {1} error: {2}, chapter:{3}  ", _CollectionModel.CollectionId, _CollectionModel.Name, exChapter.Message, this.currentUrl_ChapterDetail), ConsoleColor.DarkRed);
+                        Log.Show(string.Format("<C{0}> {1} retryTimes: {2}", _CollectionModel.CollectionId, _CollectionModel.Name, retryTimes)); 
+                        retryTimes++;
+                        if (retryTimes >=3)
+                        {
+                            throw exChapter;
+                        } 
+                    }
                 }
 
                 //一次完整的采集操作完成,现在要清理数据间隔一个比较长的时间之后再次
@@ -173,16 +192,14 @@ namespace NovelCollProject.plugin
             {
                 if (currenttask.PageType == PageTypeEnum.DetailPage1 || PageTypeEnum.DetailPage2 == currenttask.PageType || PageTypeEnum.DetailPage3 == currenttask.PageType)
                 {
-                    if (tempData.ContainsKey(currenttask.Url))
-                    {
-                        tempData.Remove(currenttask.Url);
-                    }
                     Log.ShowLine(string.Format("{1}<C{0}> 没有采到内容{2}", _CollectionModel.CollectionId, _CollectionModel.Name, currenttask.Url), ConsoleColor.DarkRed);
+                    throw new Exception("没有采集到章节内容数据");
                 }
                 else if (currenttask.PageType == PageTypeEnum.ListPage1 || currenttask.PageType == PageTypeEnum.ListPage2 || currenttask.PageType == PageTypeEnum.ListPage3)
-                    {
-                    throw new Exception("没有采集到章节数据");
+                {
+                    throw new Exception("没有采集到章节列表数据");
                 }
+
                 return;
             }
 
@@ -315,7 +332,7 @@ namespace NovelCollProject.plugin
             if (price > 15)
                 price = 15;
             cm.Pirce = price;
-           
+
         }
 
 

@@ -30,8 +30,11 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1013);
             CollctionModelList.Add(model_1014);
             CollctionModelList.Add(model_1015);
+            CollctionModelList.Add(model_1016);
+            CollctionModelList.Add(model_1017);
         }
 
+        #region 采集小说配置
         /// <summary>
         /// 春野小村医_1002 连载中 
         /// </summary>
@@ -216,6 +219,7 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "duojiaoshancun",
             "nothing");
+        #endregion
 
         /// <summary>
         /// 血色爱恋 原名 血色浪漫_1015 --已完结, 
@@ -229,6 +233,34 @@ namespace NovelCollProject
             @"十八岁之前，我过着非人的生活，直到尊严被极度践踏的生日夜…… 我努力冲向未来……",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "xueseailian",
+            "nothing");
+
+        /// <summary>
+        /// 邪魔保镖 原名 妖孽保镖_1016 --已完结, 
+        /// </summary>
+        public static CollectionModel model_1016 = new CollectionModel(
+            2,
+            "web_qb5200",
+            "http://www.qb5200.org/xiaoshuo/68/68506/?chapterlist",
+            1016,
+            "邪魔保镖",
+            @"这货工作之余揽私活儿，一个人承接多位美女的保护任务；他敢于狂吃窝边草，当然还有窝外的草，以及其他草、所有草。一个妖孽如谜的男人，一群形形色色的女人，演绎了万花丛中的一段段离奇韵事。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "xiemobaobiao",
+            "nothing");
+
+        /// <summary>
+        /// 生态园里的爱恋 原名 寡嫂_1017 --已完结, 
+        /// </summary>
+        public static CollectionModel model_1017 = new CollectionModel(
+            1,
+            "web_lwtxt",
+            "http://www.lwtxt.net/book/48/48138/?chapterlist",
+            1017,
+            "生态园里的爱恋",
+            @"我没有血缘关系的哥不幸死了，为了保护年轻漂亮的嫂子，两年前我因为她差点杀人，逃出山村。 现在回来了，我继续要保护嫂子，跟她一起过人生。但却碰上了生态园的成熟美艳女经理，俏丽的小护士，还有村里的小妖女和生态园的贵妇女客人，让我十八岁的青春很多彩",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "shengtaiyuan",
             "nothing");
 
 
