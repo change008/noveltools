@@ -33,6 +33,12 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1016);
             CollctionModelList.Add(model_1017);
             CollctionModelList.Add(model_1018);
+            CollctionModelList.Add(model_1019);
+            CollctionModelList.Add(model_1020);
+            CollctionModelList.Add(model_1021);
+            CollctionModelList.Add(model_1022);
+            CollctionModelList.Add(model_1023);
+            CollctionModelList.Add(model_1024);
         }
 
         #region 采集小说配置
@@ -277,6 +283,90 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "tongjuriji",
             "nothing",true);
+
+        /// <summary>
+        /// 乡村小农民 原名 春野小农民_1019--连载中, 
+        /// </summary>
+        public static CollectionModel model_1019 = new CollectionModel(
+            1,
+            "web_yixuanju",
+            "http://www.yixuanju.com/book/15752/?chapterlist",
+            1019,
+            "乡村小农民",
+            @"小农民偶得仙家洞府，修炼神功无所不能，透视医术样样都行，立志走上人生巅峰！ 正当刘伟低调发财时，却发现邻家妹妹，隔壁嫂子，火辣白领，娇蛮大小姐，冰山女总裁，双胞胎校花，数不尽的美女纷纷找上门来……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", true);
+
+        /// <summary>
+        /// 重生官路 原名 官色：攀上女领导_1020--连载中, 
+        /// </summary>
+        public static CollectionModel model_1020 = new CollectionModel(
+            1,
+            "web_2wxs",
+            "http://www.2wxs.com/xstxt/4515/?chapterlist",
+            1020,
+            "重生官路",
+            @"一个刚被人设计落选的副局长，稀里糊涂的重生到了十几年前。    面对着91年那风云激荡的国际局势，他抓住机遇，利用自己上辈子的记忆和从政经验，从底层科员做起，一步步登上了官场的高峰。    从而打造了一个不可复制的官场神话，真正成为了一个驰骋官场不倒的弄潮儿！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+        /// <summary>
+        /// 超级小仙医 原名 农民小仙医_1021--连载中, 
+        /// </summary>
+        public static CollectionModel model_1021 = new CollectionModel(
+            1,
+            "web_akxs6",
+            "http://www.akxs6.com/8/8129/?chapterlist",
+            1021,
+            "超级小仙医",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+        /// <summary>
+        /// 男公关回忆录 原名 我做男公关的那几年_1022--连载中, 
+        /// </summary>
+        public static CollectionModel model_1022 = new CollectionModel(
+            2,
+            "web_365if",
+            "http://www.365if.com/list/97/97481.html?chapterlist",
+            1022,
+            "男公关回忆录",
+            @"本是富二代，却天降大祸，带走父亲，比我仅大七岁的后妈带走了所有遗产，我刷爆所有信用卡，为了还账，当上了公关，从此多少年，多少年……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+        /// <summary>
+        /// 乡村美事 原名 乡村大凶器_1023--连载中, 
+        /// </summary>
+        public static CollectionModel model_1023 = new CollectionModel(
+            1,
+            "web_yidudu",
+            "http://www.yidudu.org/xiangcundaxiongqi/chapter.html?chapterlist",
+            1023,
+            "乡村美事",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+        /// <summary>
+        /// 那些公司里的事 原名 色即是空_1024--连载中, 
+        /// </summary>
+        public static CollectionModel model_1024 = new CollectionModel(
+            1,
+            "web_lwtxt",
+            "http://www.lwtxt.net/book/50/50496/?chapterlist",
+            1024,
+            "那些公司里的事",
+            @"那些年在公司里的女人",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
 
 
     }

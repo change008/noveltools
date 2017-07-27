@@ -107,6 +107,11 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_yidudu\web_yidudu.cs" />
+    <Compile Include="plugin\web_365if\web_365if.cs" />
+    <Compile Include="plugin\web_akxs6\web_akxs6.cs" />
+    <Compile Include="plugin\web_2wxs\web_2wxs.cs" />
+    <Compile Include="plugin\web_yixuanju\web_yixuanju.cs" />
     <Compile Include="plugin\web_ouoou\web_ouoou.cs" />
     <Compile Include="plugin\web_lwtxt\web_lwtxt.cs" />
     <Compile Include="plugin\web_qb5200\web_qb5200.cs" />
