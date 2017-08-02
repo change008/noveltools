@@ -39,6 +39,13 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1022);
             CollctionModelList.Add(model_1023);
             CollctionModelList.Add(model_1024);
+
+            CollctionModelList.Add(model_1025);
+            CollctionModelList.Add(model_1026);
+            CollctionModelList.Add(model_1031);
+            CollctionModelList.Add(model_1032);
+            CollctionModelList.Add(model_1034);
+            CollctionModelList.Add(model_1035);
         }
 
         #region 采集小说配置
@@ -158,7 +165,7 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 我在殡仪馆工作的那些事_1010 --未完结
+        /// 神秘殡仪馆的一些事 原名 我在殡仪馆工作的那些事_1010 --未完结
         /// </summary>
         public static CollectionModel model_1010 = new CollectionModel(
             1,
@@ -172,7 +179,7 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 堕落女友_1011 --已完结
+        /// 沉沦的女友  原名 堕落女友_1011 --已完结
         /// </summary>
         public static CollectionModel model_1011 = new CollectionModel(
             2,
@@ -226,7 +233,7 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "duojiaoshancun",
             "nothing");
-        #endregion
+        
 
         /// <summary>
         /// 血色爱恋 原名 血色浪漫_1015 --已完结, 
@@ -354,6 +361,8 @@ namespace NovelCollProject
             "nothing",
             "nothing", false);
 
+        #endregion
+       
         /// <summary>
         /// 那些公司里的事 原名 色即是空_1024--连载中, 
         /// </summary>
@@ -367,6 +376,91 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing");
+
+        /// <summary>
+        /// 美女村长的超级保镖 原名 女村长的贴身保镖_1025--完结, 
+        /// </summary>
+        public static CollectionModel model_1025 = new CollectionModel(
+            2,
+            "web_luoqiu",
+            "http://www.luoqiu.com/read/44671/?chapterlist",
+            1025,
+            "美女村长的超级保镖",
+            @"美女村长拥有一个贴身的保镖...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 护花神龙 原名 护花狂龙_1026--完结, 
+        /// </summary>
+        public static CollectionModel model_1026 = new CollectionModel(
+            2,
+            "web_feizw",
+            "http://www.feizw.com/Html/4396/index.html?chapterlist",
+            1026,
+            "护花神龙",
+            @"护花神龙...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 草根的逆袭 原名 屌丝崛起_1031--完结, 
+        /// </summary>
+        public static CollectionModel model_1031= new CollectionModel(
+            2,
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/10/10727/index.html?chapterlist",
+            1031,
+            "草根的逆袭",
+            @"已婚主妇的秘密...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+
+        /// <summary>
+        /// 村里的神医 原名 乡村小神医_1032--连载, 
+        /// </summary>
+        public static CollectionModel model_1032 = new CollectionModel(
+            1,
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/10/10582/index.html?chapterlist",
+            1032,
+            "村里的神医",
+            @"山沟里的穷小子偶得玄妙的长生造化诀，种田、治病、风水、占卜……样样都行，某日修炼小成的穷小子随手占卜了一卦，卦象显示：否极泰来，桃花泛滥！于是……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 超级高手 原名 超凡高手_1034--连载, 
+        /// </summary>
+        public static CollectionModel model_1034 = new CollectionModel(
+            1,
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/7/7675/index.html?chapterlist",
+            1034,
+            "村里的神医",
+            @"佣兵界兵王，为寻找失散多年的妹妹，回归都市，偶遇美女经理。 文能贴身护美女，武能提枪安吾妻。 一代兵王掀起都市新一轮的腥风血雨！……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 绝色乡村 原名 艳绝乡村_1035--连载, 
+        /// </summary>
+        public static CollectionModel model_1035 = new CollectionModel(
+            1,
+            "web_xxbiquge",
+            "http://www.xxbiquge.com/2_2226/?chapterlist",
+            1035,
+            "绝色乡村",
+            @"绝色乡村……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing",true);
 
 
     }

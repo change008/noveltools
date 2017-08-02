@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_ziyouge
+namespace NovelCollProject.plugin.web_feizw
 {
     class Page : PageBase
     {
@@ -27,10 +27,9 @@ namespace NovelCollProject.plugin.web_ziyouge
         /// <param name="pageFeature"></param>
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
-            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:ziyouge.com/nonono$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:ziyouge.com/\w+/\d+/\d+/index.html\?chapterlist");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:ziyouge.com/\w+/\d+/\d+/\d+.html");
-            //pageFeature.InjectUrlRule(PageTypeEnum.DetailPage2, @"REG:hkslg520.com/\d+/\d+/\d+_\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:lwtxt.net/nonono$");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:feizw.com/\w+/\d+/\w+.html\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:feizw.com/\w+/\d+/\d+.html");
         }
 
 
@@ -69,7 +68,7 @@ namespace NovelCollProject.plugin.web_ziyouge
             Hashtable ht = new Hashtable();
             Regex tempReg = null;
             Match tempMatch = null;
-            HtmlNode linkNodes = documentNode.SelectSingleNode("//uv[@class='chapter-list']/li[@class='chapter']");
+            HtmlNode linkNodes = documentNode.SelectSingleNode("//div[@id='info']/h1");
             if (linkNodes != null)
             {
                 var title = linkNodes.InnerText;
@@ -86,11 +85,10 @@ namespace NovelCollProject.plugin.web_ziyouge
             {
                 var tag = linkNodes?.GetAttributeValue("content", "");
                 ht.Add(CollectionFieldName.Novel_Tag, tag);
-            }
-           
+            }    
             var url = InternalRealUrl + "?chapter=";
             ht.Add(CollectionFieldName.Url, url);
-           
+
             tempReg = new Regex(@"/(\w+)/$");
             tempMatch = tempReg.Match(InternalRealUrl);
             if (tempMatch.Success)
@@ -114,7 +112,7 @@ namespace NovelCollProject.plugin.web_ziyouge
             List<string> multipage = null;
             Regex reg;
             Match m;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//ul[@class='chapter-list']/li[@class='chapter']");
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@class='chapterlist']/ul[@class='clearfix']/li");
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();
@@ -131,19 +129,19 @@ namespace NovelCollProject.plugin.web_ziyouge
                     ht.Add(CollectionFieldName.Chap_Title, title);
                     ht.Add(CollectionFieldName.Url, url);
                     ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
-                    //if (!string.IsNullOrEmpty(title))
-                    //{
-                    //    reg = new Regex(@"第(\d+)章");
-                    //    m = reg.Match(title);
-                    //    if (m.Success)
-                    //    {
-                    //        int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                    //        ht.Add(CollectionFieldName.Chap_SortOrder, order);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //}
+                    if (!string.IsNullOrEmpty(title))
+                    {
+                        reg = new Regex(@"第(\d+)章");
+                        m = reg.Match(title);
+                        if (m.Success)
+                        {
+                            int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
+                            ht.Add(CollectionFieldName.Chap_SortOrder, order);
+                        }
+                    }
+                    else
+                    {
+                    }
 
 
                     links.Add(ht);
@@ -170,25 +168,20 @@ namespace NovelCollProject.plugin.web_ziyouge
             string tempInnerText = null;
             Regex tempReg = null;
             Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id=\"htmlContent\"]");
+            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
-                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script");
-                //tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "")
-                    .Replace("本站访问地址http://www.ziyouge.com 任意搜索引擎内输入:紫幽阁 即可访问!", "")
-                    .Replace("http://www.ziyouge.com", "")
-                    .Replace("紫幽阁", "")
-                    ;
-                    
+                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script","center","span");
 
+                tempString = tempString.Replace("\r\n", "").Replace("\t", "")
+                    .Replace("最快更新无错小说阅读，请访问www.feizw.com","")
+                    .Replace("手机请访问：http://m.feizw.com","");
 
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
 
                 //移除无效字符,用来计算长度
-                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "").Replace("feisuz", "")
-                    .Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
+                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "");
                 if (!string.IsNullOrEmpty(tempInnerText))
                 {
                     returndata.Add(CollectionFieldName.Chap_ContentLen, tempInnerText.Length);
@@ -213,6 +206,12 @@ namespace NovelCollProject.plugin.web_ziyouge
                 returndata.Add(CollectionFieldName.Chap_ChapterType, ChapterType.ChapterType_Free);
                 tempInnerText = tempNode.InnerText;
 
+            }
+            else
+            {
+                int i = 1;
+                int j = 1 + 1;
+           
             }
             return returndata;
         }
