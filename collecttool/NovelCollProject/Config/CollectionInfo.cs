@@ -697,6 +697,8 @@ namespace NovelCollProject
                 return chapterList.First();
             }
 
+
+
             bool isCurrent = false;
             foreach (var item in chapterList)
             {

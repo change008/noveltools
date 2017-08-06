@@ -126,6 +126,8 @@ namespace NovelCollProject.plugin
                     try
                     {
                         int intervalX = new Random().Next(100, 500); //每次休息一定时间
+                        //int intervalX = new Random().Next(20, 100); //每次休息一定时间
+
                         Thread.Sleep(intervalX);
 
                         //开始采集本章节内容数据
@@ -248,6 +250,8 @@ namespace NovelCollProject.plugin
             List<string> nextPages = hashtable.ContainsKey(CollectionFieldName.Pages) ? (List<string>)hashtable[CollectionFieldName.Pages] : null;
             List<string> multiPages = hashtable.ContainsKey(CollectionFieldName.MultiPages) ? (List<string>)hashtable[CollectionFieldName.MultiPages] : null;
 
+            Hashtable htKeys = new Hashtable(); //判断是否重复
+
             //detaiList = null;
             if (detaiList != null)
             {
@@ -260,6 +264,13 @@ namespace NovelCollProject.plugin
                     cm[CollectionFieldName.Url] = url;
                     wxchapter rm = new wxchapter();
                     fillWxChapterModel(rm, cm, _CollectionModel.CollectionId);
+
+                    //防止出现重复章节一直循环
+                    if (htKeys.ContainsKey(rm.Id))
+                    {
+                        continue;
+                    }
+                    htKeys.Add(rm.Id, rm.Id); 
 
                     //章节数据保存
                     this._CollectionModel.chapterList.Add(rm);
