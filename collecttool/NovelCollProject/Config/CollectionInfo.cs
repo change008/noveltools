@@ -46,6 +46,15 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1032);
             CollctionModelList.Add(model_1034);
             CollctionModelList.Add(model_1035);
+
+            CollctionModelList.Add(model_1036);
+            CollctionModelList.Add(model_1037);
+            CollctionModelList.Add(model_1038);
+            CollctionModelList.Add(model_1039);
+            CollctionModelList.Add(model_1040);
+            CollctionModelList.Add(model_1041);
+            CollctionModelList.Add(model_1042);
+            CollctionModelList.Add(model_1043);
         }
 
         #region 采集小说配置
@@ -461,6 +470,121 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing",true);
+
+
+
+        /// <summary>
+        /// 乡村官道 原名 官梯_1036--连载, 
+        /// </summary>
+        public static CollectionModel model_1036 = new CollectionModel(
+            1,
+            "web_jingcaiyuedu",
+            "http://www.jingcaiyuedu.com/book/346075.html?chapterlist",
+            1036,
+            "乡村官道",
+            @"道，可以是一条路，也可以是一条法则；正道，那就是正确的道路或者是正确的法则；为人者，走错了道可以改回来，大不了从头再来；为官者，踏出一步，就是一个脚印，对了，那是份内之事，错了，前面就是万丈深渊；天若有情天亦老，人间正道是沧桑。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", true);
+
+        /// <summary>
+        /// 潇洒兵神 原名 逍遥兵王_1037--连载, 
+        /// </summary>
+        public static CollectionModel model_1037 = new CollectionModel(
+            1,
+            "web_126shu",
+            "http://www.126shu.com/14207/?chapterlist",
+            1037,
+            "潇洒兵神",
+            @"为兄弟，他两肋插刀，为女人，他怒为红颜，为国家，他誓死如归",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 冥界新娘 原名 来自阴间的新娘_1038--连载, 
+        /// </summary>
+        public static CollectionModel model_1038 = new CollectionModel(
+            1,
+            "web_yznn",
+            "http://www.yznn.com/files/article/html/37/37002/index.html?chapterlist",
+            1038,
+            "冥界新娘",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 上门女婿的一些事 原名 我当上门女婿的那些年_1039--连载, 
+        /// </summary>
+        public static CollectionModel model_1039 = new CollectionModel(
+            1,
+            "web_258zw",
+            "http://www.258zw.com/html/155657/?chapterlist",
+            1039,
+            "上门女婿的一些事",
+            @"为了钱我做了上门女婿，可是洞房花烛夜，压在新娘身上的男人，却不是我！ 而后，我发现了新娘身上的惊人的秘密……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 恐怖游戏 原名 绝望游戏_1040--连载, 
+        /// </summary>
+        public static CollectionModel model_1040 = new CollectionModel(
+            1,
+            "web_yikanxiaoshuo",
+            "http://www.yikanxiaoshuo.com/yikan/388433/",
+            1040,
+            "恐怖游戏",
+            @"微信群里有土豪发红包，要求运气王跟它玩个游戏，竟然是让班花做……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+
+        /// <summary>
+        /// 村里的美女老师 原名 乡村女教师_1041--连载, 
+        /// </summary>
+        public static CollectionModel model_1041 = new CollectionModel(
+            1,
+            "web_xyshu8",
+            "http://www.xyshu8.net/Html/Book/36/36454/Index.html?chapterlist",
+            1041,
+            "村里的美女老师",
+            @"一方山水养一方人，桃水村虽然偏僻，但这里的女人个个都白嫩水灵。……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 女总裁的超级保镖 原名 女总裁的雇佣兵王_1042--连载, 
+        /// </summary>
+        public static CollectionModel model_1042 = new CollectionModel(
+            1,
+            "web_guijj",
+            "http://www.guijj.com/mulu/8746.html?chapterlist",
+            1042,
+            "女总裁的超级保镖",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing",true);
+
+        /// <summary>
+        /// 乡村里的一些事 原名 乡村那些事儿_1043--连载, 
+        /// </summary>
+        public static CollectionModel model_1043 = new CollectionModel(
+            1,
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/13/13079/index.html?chapterlist",
+            1043,
+            "乡村里的一些事",
+            @"赵铁柱大专毕业回村里，一个个大媳妇小姑娘用各种理由缠上来，让他欲罢不能···",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
 
 
     }

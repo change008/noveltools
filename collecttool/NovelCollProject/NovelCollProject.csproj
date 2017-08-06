@@ -107,6 +107,10 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_guijj\web_guijj.cs" />
+    <Compile Include="plugin\web_xyshu8\web_xyshu8.cs" />
+    <Compile Include="plugin\web_258zw\web_258zw.cs" />
+    <Compile Include="plugin\web_yznn\web_yznn.cs" />
     <Compile Include="plugin\web_yilego\web_yilego.cs" />
     <Compile Include="plugin\web_xxbiquge\web_xxbiquge.cs" />
     <Compile Include="plugin\web_feizw\web_feizw.cs" />

@@ -1,15 +1,14 @@
-﻿using HtmlAgilityPack;
-using NovelCollProject;
-using NovelCollProjectutils;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
+using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_jingcaiyuedu
+namespace NovelCollProject.plugin.web_yznn
 {
     class Page : PageBase
     {
@@ -21,16 +20,18 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
         public object HtmlUtil { get; private set; }
 
 
+
         /// <summary>
         ///添加页面特征规则 
         /// </summary>
         /// <param name="pageFeature"></param>
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
-            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:jingcaiyuedu.com/book/\d+.html$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:jingcaiyuedu.com/\w+/\d+.html\?chapterlist");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:jingcaiyuedu.com/book/\d+/\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:lwtxt.net/nonono$");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:yznn.com/\w+/\w+/\w+/\d+/\d+/index.html\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:yznn.com/\w+/\w+/\w+/\d+/\d+/\d+.html");
         }
+
 
         /// <summary>
         /// 解析页面内容
@@ -57,8 +58,6 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
             }
         }
 
-
-
         /// <summary>
         /// 解析开始页
         /// </summary>
@@ -69,17 +68,16 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
             Hashtable ht = new Hashtable();
             Regex tempReg = null;
             Match tempMatch = null;
-            HtmlNode linkNodes = documentNode.SelectSingleNode("//meta[@property='og:title']");
+            HtmlNode linkNodes = documentNode.SelectSingleNode("//div[@id='info']/h1");
             if (linkNodes != null)
             {
-                var title = linkNodes.GetAttributeValue("content","");
+                var title = linkNodes.InnerText;
                 ht.Add(CollectionFieldName.Novel_Name, title);
             }
-            linkNodes = documentNode.SelectSingleNode("//div[@class='pic text-center']/img");
+            linkNodes = documentNode.SelectSingleNode("//div[@id='fmimg']/img");
             if (linkNodes != null)
             {
                 var imgUrl = linkNodes?.GetAttributeValue("src", "");
-                imgUrl= HTMLUtil.GetFullURL(InternalRealUrl, imgUrl);
                 ht.Add(CollectionFieldName.Novel_CoverImgs, imgUrl);
             }
             linkNodes = documentNode.SelectSingleNode("//meta[@property='og:novel:category']");
@@ -87,16 +85,15 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
             {
                 var tag = linkNodes?.GetAttributeValue("content", "");
                 ht.Add(CollectionFieldName.Novel_Tag, tag);
-            }
-            
-            var url = InternalRealUrl;
+            }    
+            var url = InternalRealUrl + "?chapter=";
             ht.Add(CollectionFieldName.Url, url);
-           
-            tempReg = new Regex(@"/(\d+).html");
+
+            tempReg = new Regex(@"/(\w+)/$");
             tempMatch = tempReg.Match(InternalRealUrl);
             if (tempMatch.Success)
             {
-                ht.Add(CollectionFieldName.Novel_UniqueFlag, tempReg.Replace(tempMatch.Value,"$1"));
+                ht.Add(CollectionFieldName.Novel_UniqueFlag, tempReg.Replace(tempMatch.Value, "$1"));
             }
             Hashtable returndata = new Hashtable();
             if (ht != null)
@@ -105,7 +102,7 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
         }
 
         /// <summary>
-        /// 解析列表页内容
+        /// 解析列表页内容--解析章节列表数据
         /// </summary>
         /// <param name="documentNode"></param>
         /// <returns></returns>
@@ -115,7 +112,7 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
             List<string> multipage = null;
             Regex reg;
             Match m;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//dl[@id='list']/dd");
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@class='zjlist4']//ol/li");
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();
@@ -172,13 +169,16 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
             string tempInnerText = null;
             Regex tempReg = null;
             Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@class='panel-body content-body content-ext']");
+            tempNode = documentNode.SelectSingleNode("//div[@id='htmlContent']");
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
-                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script", "center", "span");
+                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script","center","span");
 
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "");
+                tempString = tempString.Replace("\r\n", "").Replace("\t", "")
+                    .Replace("全本小说网欢迎您！WWW.YZNN.COM T1706231537", "")
+                    .Replace("F606121", "")
+                    .Replace("全本小说网欢迎您！WWW.YZNN.COM", "");
 
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
 
@@ -213,7 +213,7 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
             {
                 int i = 1;
                 int j = 1 + 1;
-
+           
             }
             return returndata;
         }
@@ -225,31 +225,7 @@ namespace NovelCollProject.plugin.web_jingcaiyuedu
         /// <returns></returns>
         private Hashtable parseDetailPage2(HtmlNode documentNode)
         {
-            List<string> multipage = null;
-            Hashtable returndata = new Hashtable();
-            HtmlNode tempNode = null;
-            string tempString = null;
-            string tempInnerText = null;
-            Regex tempReg = null;
-            Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
-            if (tempNode != null)
-            {
-                tempString = tempNode.InnerHtml;
-                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script");
-                tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "");
-                returndata.Add(CollectionFieldName.ExContent, tempString);
-            }
-            HtmlNode nextLink = documentNode.SelectNodes("//*[@id='content']/div[@class='text']/a")?.FirstOrDefault(x => x.InnerText == "下一节");
-            if (nextLink != null)
-            {
-
-                string url = nextLink.GetAttributeValue("href", "");
-                if (!string.IsNullOrEmpty(url) && url != "#")
-                    returndata.Add(CollectionFieldName.NextUrl, url);
-            }
-            return returndata;
+            return null;
         }
     }
 }

@@ -125,8 +125,6 @@ namespace NovelCollProject.plugin
                 {
                     try
                     {
-                        retryTimes = 0;
-
                         int intervalX = new Random().Next(100, 500); //每次休息一定时间
                         Thread.Sleep(intervalX);
 
@@ -144,12 +142,15 @@ namespace NovelCollProject.plugin
 
                         publishBiz.doSubmitChapter(nextChapter);
 
+                        //提交完后错误计数重置
+                        retryTimes = 0;
 
                         Log.Show(string.Format("<C{0}> {1} 灌入章节数据: {2}  ", _CollectionModel.CollectionId, _CollectionModel.Name, nextChapter.Title), ConsoleColor.DarkGreen);
 
                         //再次获取线上图书状态数据
                         receiveResult = publishBiz.doGetBookInfo(this._CollectionModel.CollectionId);
                         nextChapter = CollectionModel.GetNextChapter(this._CollectionModel.chapterList, receiveResult.maxchapterid);
+
 
                     }
                     catch (Exception exChapter)
