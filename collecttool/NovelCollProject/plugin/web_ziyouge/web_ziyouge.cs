@@ -180,8 +180,17 @@ namespace NovelCollProject.plugin.web_ziyouge
                     .Replace("本站访问地址http://www.ziyouge.com 任意搜索引擎内输入:紫幽阁 即可访问!", "")
                     .Replace("http://www.ziyouge.com", "")
                     .Replace("紫幽阁", "")
+                    .Replace("www.ziyouge.com", "")
+                    .Replace("ziyouge.com", "")
+                    .Replace("ziyouge", "")
+                    .Replace("http://", "")
+                    .Replace("http", "")
+                    .Replace("紫Ｙou阁 ＷwＷ.ZiyouＧＥ.com", "")
                     ;
-                    
+
+                //正则替换域名
+                string pattern = @"(?=.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+";
+                tempString = Regex.Replace(tempString, pattern, "");
 
 
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);

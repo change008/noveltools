@@ -370,7 +370,7 @@ namespace NovelCollProject
             "nothing",
             "nothing", false);
 
-        #endregion
+        
        
         /// <summary>
         /// 那些公司里的事 原名 色即是空_1024--连载中, 
@@ -571,6 +571,7 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing",true);
+        #endregion
 
         /// <summary>
         /// 乡村里的一些事 原名 乡村那些事儿_1043--连载, 
