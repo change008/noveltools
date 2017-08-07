@@ -192,19 +192,18 @@ namespace NovelCollProject.plugin.web_yikanxiaoshuo
                     .Replace("本书红薯网首发,请勿转载!", "")
                     .Replace("老铁!还在找\"美艳冥妻\"免费小说?","")
                     .Replace("&nbsp;&nbsp;&nbsp;&nbsp;(www.yikanxiaoshuo.com = ","").Trim().TrimEnd(')')
-                    .Replace("<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;百度直接搜索: \"易看小说\" 看免费小说,没毛病!<br>","");
+                    .Replace("<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;百度直接搜索: \"易看小说\" 看免费小说,没毛病!<br>","")
+                    .Replace("老铁!还在找\"绝望游戏\"免费小说?", "")
+                    .Replace("百度直接搜索: \"易看小说\" 看免费小说,没毛病!", "")
+                    .Replace("\"易看小说\"", "")
+                    .Replace("易看小说", "")
+                    .Replace("免费小说", "")
+                    ;
 
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
 
                 //移除无效字符,用来计算长度
-                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "")
-                    .Replace("feisuz", "")
-                    .Replace("作者的话:", "")
-                    .Replace("新书，求收藏求推荐", "")
-                    .Replace("本书红薯网首发,请勿转载!", "")
-                    .Replace("老铁!还在找\"美艳冥妻\"免费小说?", "")
-                    .Replace("&nbsp;&nbsp;&nbsp;&nbsp;(www.yikanxiaoshuo.com = ", "").Trim().TrimEnd(')')
-                    .Replace("<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;百度直接搜索: \"易看小说\" 看免费小说,没毛病!<br>", "");
+                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "");
 
                 if (!string.IsNullOrEmpty(tempInnerText))
                 {
