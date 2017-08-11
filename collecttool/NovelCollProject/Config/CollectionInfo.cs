@@ -164,8 +164,8 @@ namespace NovelCollProject
         /// </summary>
         public static CollectionModel model_1009 = new CollectionModel(
             1,
-            "web_yilego",
-            "http://www.yilego.com/book/6/6506/index.html",
+            "web_qb520",
+            "http://www.qb520.org/xiaoshuo/9/9621/?chapterlist",
             1009,
             "假面娇妻",
             @"结婚纪念日妻子晚归，李泽发现了妻子身上的异常。而当李泽确定妻子不仅在上班期间洗过澡，而且身上还少了某样东西时，李泽意识到妻子可能已经出轨……",
