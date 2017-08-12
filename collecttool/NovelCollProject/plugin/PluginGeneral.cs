@@ -32,6 +32,7 @@ namespace NovelCollProject.plugin
                 _collectionModel = value;
                 currentUrl_ChapterList = _collectionModel.Url;
                 baseUrl = _collectionModel.Url;
+                currenttask.collectionId = _collectionModel.CollectionId;
             }
         }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_365if
+namespace NovelCollProject.plugin.web_biquge5200
 {
     class Page : PageBase
     {
@@ -27,9 +27,9 @@ namespace NovelCollProject.plugin.web_365if
         /// <param name="pageFeature"></param>
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
-            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:ouoou.com/nonono$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:365if.com/\w+/\d+/\d+.html\?chapterlist");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:365if.com/\w+/\d+/\d+/\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:lwtxt.net/nonono$");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:biquge5200.com/\d+_\d+/\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:biquge5200.com/\d+_\d+/\d+.html");
         }
 
 
@@ -85,7 +85,7 @@ namespace NovelCollProject.plugin.web_365if
             {
                 var tag = linkNodes?.GetAttributeValue("content", "");
                 ht.Add(CollectionFieldName.Novel_Tag, tag);
-            }    
+            }
             var url = InternalRealUrl + "?chapter=";
             ht.Add(CollectionFieldName.Url, url);
 
@@ -112,12 +112,22 @@ namespace NovelCollProject.plugin.web_365if
             List<string> multipage = null;
             Regex reg;
             Match m;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//td[@class='L']");
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@id='list']/dl/dd");
             if (linkNodes != null)
             {
+
+                int index = 0;
+
                 links = new List<Hashtable>();
                 foreach (var liNode in linkNodes)
                 {
+                    //前面9章是最后更新章节
+                    index++;
+                    if (index <= 9)
+                    {
+                        continue;
+                    }
+
                     var title = liNode.SelectSingleNode("a")?.InnerText;
                     var url = liNode.SelectSingleNode("a")?.GetAttributeValue("href", "");
                     if (string.IsNullOrEmpty(url))
@@ -125,23 +135,22 @@ namespace NovelCollProject.plugin.web_365if
                     reg = new Regex(@"(\d+).html");
                     m = reg.Match(url);
                     string flag = reg.Replace(m.Value, "$1");
+
+                    //特定处理
+                    if (collectionId == 1002)
+                    {
+                        long x = long.Parse(flag);
+                        if (x< 144280059 || x> 144280072)
+                        {
+                            continue;
+                        }
+                    }
+
                     Hashtable ht = new Hashtable();
                     ht.Add(CollectionFieldName.Chap_Title, title);
                     ht.Add(CollectionFieldName.Url, url);
                     ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
-                    if (!string.IsNullOrEmpty(title))
-                    {
-                        reg = new Regex(@"第(\d+)章");
-                        m = reg.Match(title);
-                        if (m.Success)
-                        {
-                            int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                            ht.Add(CollectionFieldName.Chap_SortOrder, order);
-                        }
-                    }
-                    else
-                    {
-                    }
+
                     links.Add(ht);
                 }
             }
@@ -152,6 +161,8 @@ namespace NovelCollProject.plugin.web_365if
                 returndata.Add(CollectionFieldName.Pages, multipage);
             return returndata;
         }
+
+
         /// <summary>
         /// 解析明细页内容
         /// </summary>
@@ -170,9 +181,16 @@ namespace NovelCollProject.plugin.web_365if
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
-                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script","center","span");
+                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script", "center", "span");
 
-                tempString = tempString.Replace("\r\n", "").Replace("\t", "");
+                tempString = tempString.Replace("\r\n", "").Replace("\t", "")
+                    .Replace("免费小说", "")
+                    .Replace("biquge5200.com", "")
+                    .Replace("biquge5200", "")
+                    .Replace("笔趣阁", "")
+                    .Replace("http://", "")
+                    .Replace("一秒记住，为您。", "");
+
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
 
                 //移除无效字符,用来计算长度
@@ -181,21 +199,15 @@ namespace NovelCollProject.plugin.web_365if
                 {
                     returndata.Add(CollectionFieldName.Chap_ContentLen, tempInnerText.Length);
                     string into = "";
-                    if (tempInnerText.Length > 40)
+                    if (tempInnerText.Length > 150)
                     {
-                        into = tempInnerText.Substring(0, 40) + "...";
+                        into = tempInnerText.Substring(0, 150) + "...";
                     }
                     else
                     {
                         into = tempInnerText;
                     }
                     returndata.Add(CollectionFieldName.Chap_Intro, into);
-                    int price = (tempString.Length / 1000) * 5;
-                    if (price == 0)
-                        price = 5;
-                    if (price > 15)
-                        price = 15;
-                    returndata.Add(CollectionFieldName.Chap_Pirce, price);
                 }
                 returndata.Add(CollectionFieldName.Chap_Status, ChapterStatus.ChapterStatus_OnLine);
                 returndata.Add(CollectionFieldName.Chap_ChapterType, ChapterType.ChapterType_Free);
@@ -206,7 +218,7 @@ namespace NovelCollProject.plugin.web_365if
             {
                 int i = 1;
                 int j = 1 + 1;
-           
+
             }
             return returndata;
         }

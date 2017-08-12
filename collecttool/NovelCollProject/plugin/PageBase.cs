@@ -21,6 +21,13 @@ namespace NovelCollProject.plugin
         protected PageFeature PageFeature;
         protected string PostValue;
         private static ILog _logger = LogManager.GetLogger(typeof(PageBase));
+
+
+        /// <summary>
+        /// 采集id用于区分某本书
+        /// </summary>
+        public int collectionId = 0;
+
         public string Url
         {
             set

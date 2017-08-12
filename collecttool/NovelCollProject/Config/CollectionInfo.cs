@@ -64,13 +64,25 @@ namespace NovelCollProject
         public static CollectionModel model_1002 = new CollectionModel(
             1,
             "web_hkslg520",
-            "http://www.hkslg520.com/167/167695/?chapterlist", 
+            "http://www.hkslg520.com/167/167695/?chapterlist",
             1002,
             "春野小村医",
             @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
             "http://m.hkslg520.com/modules/article/images/nocover.jpg",
-            "chunyexiaocunyi", 
+            "chunyexiaocunyi",
             "nothing");
+
+        //public static CollectionModel model_1002 = new CollectionModel(
+        //    1,
+        //    "web_biquge5200",
+        //    "http://www.biquge5200.com/68_68723/?chapterlist",
+        //    1002,
+        //    "春野小村医",
+        //    @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
+        //    "http://m.hkslg520.com/modules/article/images/nocover.jpg",
+        //    "chunyexiaocunyi",
+        //    "nothing");
+
 
         /// <summary>
         /// 透视小村医_1003 --已完结
