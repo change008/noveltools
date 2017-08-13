@@ -55,6 +55,11 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1041);
             CollctionModelList.Add(model_1042);
             CollctionModelList.Add(model_1043);
+
+
+            CollctionModelList.Add(model_1046);
+
+
         }
 
         #region 采集小说配置
@@ -595,6 +600,20 @@ namespace NovelCollProject
             1043,
             "乡村里的一些事",
             @"赵铁柱大专毕业回村里，一个个大媳妇小姑娘用各种理由缠上来，让他欲罢不能···",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 美女老板的贴身兵王 原名 女总裁的贴身兵王_1046--连载, 
+        /// </summary>
+        public static CollectionModel model_1046 = new CollectionModel(
+            1,
+            "web_freexs",
+            "http://www.freexs.org/novel/113/113211/index.html?chapterlist",
+            1046,
+            "美女老板的贴身兵王",
+            @"...",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing");
