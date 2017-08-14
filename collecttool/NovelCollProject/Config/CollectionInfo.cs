@@ -58,6 +58,7 @@ namespace NovelCollProject
 
 
             CollctionModelList.Add(model_1046);
+            CollctionModelList.Add(model_1047);
 
 
         }
@@ -618,6 +619,19 @@ namespace NovelCollProject
             "nothing",
             "nothing");
 
+        /// <summary>
+        /// 妻子的诱惑 原名 倾城娇妻_1047--完结, 
+        /// </summary>
+        public static CollectionModel model_1047 = new CollectionModel(
+            1,
+            "web_shoujikanshu",
+            "http://www.shoujikanshu.org/xiaoshuo/index_18594.html?chapterlist",
+            1047,
+            "妻子的诱惑",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
 
     }
 
