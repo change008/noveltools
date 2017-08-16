@@ -107,6 +107,7 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_zwdu\web_zwdu.cs" />
     <Compile Include="plugin\web_shoujikanshu\web_shoujikanshu.cs" />
     <Compile Include="plugin\web_freexs\web_freexs.cs" />
     <Compile Include="plugin\web_biquge5200\web_biquge5200.cs" />

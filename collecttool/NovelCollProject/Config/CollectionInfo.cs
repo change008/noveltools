@@ -61,6 +61,9 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1047);
 
 
+            CollctionModelList.Add(model_1048);
+
+
         }
 
         #region 采集小说配置
@@ -623,11 +626,26 @@ namespace NovelCollProject
         /// 妻子的诱惑 原名 倾城娇妻_1047--完结, 
         /// </summary>
         public static CollectionModel model_1047 = new CollectionModel(
-            1,
+            2,
             "web_shoujikanshu",
             "http://www.shoujikanshu.org/xiaoshuo/index_18594.html?chapterlist",
             1047,
             "妻子的诱惑",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+
+        /// <summary>
+        /// 超级天眼 原名 透视之眼_1048--完结, 
+        /// </summary>
+        public static CollectionModel model_1048 = new CollectionModel(
+            2,
+            "web_zwdu",
+            "http://www.zwdu.com/book/10743/?chapterlist",
+            1048,
+            "超级天眼",
             @"...",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
