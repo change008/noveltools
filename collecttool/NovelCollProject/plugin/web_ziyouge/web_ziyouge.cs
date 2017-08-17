@@ -186,6 +186,8 @@ namespace NovelCollProject.plugin.web_ziyouge
                     .Replace("http://", "")
                     .Replace("http", "")
                     .Replace("紫Ｙou阁 ＷwＷ.ZiyouＧＥ.com", "")
+                    .Replace("WWw.ZiyoUgE.com", "")
+                   
                     ;
 
                 //正则替换域名

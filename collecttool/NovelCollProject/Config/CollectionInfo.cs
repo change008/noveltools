@@ -63,7 +63,7 @@ namespace NovelCollProject
 
             CollctionModelList.Add(model_1048);
 
-
+            CollctionModelList.Add(model_1061);
         }
 
         #region 采集小说配置
@@ -647,6 +647,20 @@ namespace NovelCollProject
             1048,
             "超级天眼",
             @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 桃花仙医 原名 乡村小仙医_1061--连载, 
+        /// </summary>
+        public static CollectionModel model_1061 = new CollectionModel(
+            1,
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/12/12117/index.html?chapterlist",
+            1061,
+            "桃花仙医",
+            @"一不小心秦凡看到村长媳妇偷情，机缘巧合之下获得异能，从此走上发家致富路，各路美女追来，桃花运不断，众美环绕……",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing");
