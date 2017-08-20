@@ -129,20 +129,6 @@ namespace NovelCollProject.plugin.web_feizw
                     ht.Add(CollectionFieldName.Chap_Title, title);
                     ht.Add(CollectionFieldName.Url, url);
                     ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
-                    if (!string.IsNullOrEmpty(title))
-                    {
-                        reg = new Regex(@"第(\d+)章");
-                        m = reg.Match(title);
-                        if (m.Success)
-                        {
-                            int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                            ht.Add(CollectionFieldName.Chap_SortOrder, order);
-                        }
-                    }
-                    else
-                    {
-                    }
-
 
                     links.Add(ht);
                 }
@@ -177,6 +163,17 @@ namespace NovelCollProject.plugin.web_feizw
                 tempString = tempString.Replace("\r\n", "").Replace("\t", "")
                     .Replace("最快更新无错小说阅读，请访问www.feizw.com","")
                     .Replace("手机请访问：http://m.feizw.com","");
+
+
+
+                //正则替换域名
+                string pattern = @"(?=.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+";
+                tempString = Regex.Replace(tempString, pattern, "");
+
+
+
+
+
 
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
 

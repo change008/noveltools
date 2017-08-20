@@ -158,10 +158,13 @@ namespace NovelCollProject.plugin
                     }
                     catch (Exception exChapter)
                     {
+                        int intervalW = new Random().Next(2*1000, 8*1000); //每次休息一定时间
+                        Thread.Sleep(intervalW);
+
                         Log.Show(string.Format("<C{0}> {1} error: {2}, chapter:{3}  ", _CollectionModel.CollectionId, _CollectionModel.Name, exChapter.Message, this.currentUrl_ChapterDetail), ConsoleColor.DarkRed);
                         Log.Show(string.Format("<C{0}> {1} retryTimes: {2}", _CollectionModel.CollectionId, _CollectionModel.Name, retryTimes)); 
                         retryTimes++;
-                        if (retryTimes >=3)
+                        if (retryTimes >=8)
                         {
                             throw exChapter;
                         } 

@@ -113,6 +113,12 @@ namespace NovelCollProject.plugin.web_freexs
             Regex reg;
             Match m;
             HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@class='readout']//tr/td/dl/dd");
+
+            if (linkNodes == null)
+            {
+                linkNodes = documentNode.SelectNodes("//div[@class='readout']/table//tr/td[not(@class)]");
+            }
+
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();

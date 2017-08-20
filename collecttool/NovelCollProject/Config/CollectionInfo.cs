@@ -62,8 +62,18 @@ namespace NovelCollProject
 
 
             CollctionModelList.Add(model_1048);
+            CollctionModelList.Add(model_1049);
 
+            //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
+            CollctionModelList.Add(model_1062);
+            CollctionModelList.Add(model_1063);
+            CollctionModelList.Add(model_1064);
+
+            CollctionModelList.Add(model_1066);
+            CollctionModelList.Add(model_1067);
+            CollctionModelList.Add(model_1068);
+            CollctionModelList.Add(model_1069);
         }
 
         #region 采集小说配置
@@ -652,6 +662,37 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
+        /// 重活一世 原名 修真万万年_1049--连载, 
+        /// </summary>
+        public static CollectionModel model_1049 = new CollectionModel(
+            1,
+            "web_luoqiu",
+            "http://www.luoqiu.com/read/305269/?chapterlist",
+            1049,
+            "重活一世",
+            @"伤我至亲之人，我一定十倍，百倍报之！侮我，辱我，羞我之人，这一世，我一定要将你们踩在脚下！...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 张狂的青春 原名 第一次亲密接触_1060--完结 -- 无法采集
+        /// </summary>
+        public static CollectionModel model_1060 = new CollectionModel(
+            1,
+            "web_bookbl",
+            "http://www.bookbl.com/xs/13386.html?chapterlist",
+            1060,
+            "张狂的青春",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        
+
+
+        /// <summary>
         /// 桃花仙医 原名 乡村小仙医_1061--连载, 
         /// </summary>
         public static CollectionModel model_1061 = new CollectionModel(
@@ -665,6 +706,106 @@ namespace NovelCollProject
             "nothing",
             "nothing");
 
+        /// <summary>
+        /// 权利的秘密 原名 权路迷局_1062--连载, 
+        /// </summary>
+        public static CollectionModel model_1062 = new CollectionModel(
+            1,
+            "web_52bqg",
+            "http://www.52bqg.com/book_27115/?chapterlist",
+            1062,
+            "权利的秘密",
+            @"在基层混迹多年毫无晋升希望的梁健，得到区委女书记的欣赏，从乡镇干部到省级干部的跋涉攀升。从中你能看到现代官场的风尚画面！...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 我的青春不归路 原名 青春禁岛_1063--连载, 
+        /// </summary>
+        public static CollectionModel model_1063 = new CollectionModel(
+            1,
+            "web_ziyouge",
+            "http://www.ziyouge.com/zy/11/11344/index.html?chapterlist",
+            1063,
+            "我的青春不归路",
+            @"我先有继父，欺负姐姐；后有继母，欺负我，让我踏上一条青春不归路……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 临时男友 原名 美女总裁的贴身高手_1064--完结, 
+        /// </summary>
+        public static CollectionModel model_1064 = new CollectionModel(
+            2,
+            "web_feizw",
+            "http://www.feizw.com/Html/11431/Index.html?chapterlist",
+            1064,
+            "临时男友",
+            @"外籍军团最出色的佣兵高飞回到故乡，偶然机会被美女总裁聘为临时男友，从此获得幸运女神的青睐……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 锦绣色香 原名 秀色生香_1066--连载, 
+        /// </summary>
+        public static CollectionModel model_1066 = new CollectionModel(
+            1,
+            "web_d9cn",
+            "http://www.d9cn.net/html/62/62132/?chapterlist",
+            1066,
+            "锦绣色香",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 女老板的贴身神兵 原名 霸道女总裁的贴身保镖_1067--连载, 
+        /// </summary>
+        public static CollectionModel model_1067 = new CollectionModel(
+            1,
+            "web_52bqg",
+            "http://www.52bqg.com/book_86198/?chapterlist",
+            1067,
+            "女老板的贴身神兵",
+            @"兵王回归都市，意外被一个美女劫色。随后去见从小定下娃娃亲的未婚妻，却发现劫色的美女是未婚妻的表妹。我擦！这该如何相处？...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        /// <summary>
+        /// 协议恋人 原名 契约恋人100天_1068--完结, 
+        /// </summary>
+        public static CollectionModel model_1068 = new CollectionModel(
+            2,
+            "web_freexs",
+            "http://www.freexs.org/novel/74/74496/index.html?chapterlist",
+            1068,
+            "协议恋人",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+
+        /// <summary>
+        /// 代孕成妻 原名 豪门锦绣甜妻_1069--完结, 
+        /// </summary>
+        public static CollectionModel model_1069 = new CollectionModel(
+            2,
+            "web_wuruo",
+            "http://www.wuruo.com/1/1039/?chapterlist",
+            1069,
+            "代孕成妻",
+            @"...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+        
     }
 
     /// <summary>

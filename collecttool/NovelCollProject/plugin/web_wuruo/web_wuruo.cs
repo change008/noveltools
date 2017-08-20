@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_ziyouge
+namespace NovelCollProject.plugin.web_wuruo
 {
     class Page : PageBase
     {
@@ -28,29 +28,10 @@ namespace NovelCollProject.plugin.web_ziyouge
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
             pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:ziyouge.com/nonono$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:ziyouge.com/\w+/\d+/\d+/index.html\?chapterlist");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:ziyouge.com/\w+/\d+/\d+/\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:wuruo.com/\d+/\d+/\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:wuruo.com/\d+/\d+/\d+.html");
             //pageFeature.InjectUrlRule(PageTypeEnum.DetailPage2, @"REG:hkslg520.com/\d+/\d+/\d+_\d+.html");
         }
-
-
-        public override void Load(bool isUTF8, int bookId = 0)
-        {
-            if (PageFeature.MatchURL(Url) == PageTypeEnum.ListPage1)
-            {
-                SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-                SetCookie("__cfduid=d4eea6ba24aed93761f72640003caa8741499590833; cf_clearance=8517be9645768b7e96357adceac88c30ed77c82c-1503065784-28800; yunsuo_session_verify=2b42ea40965fa1009ccdfc189a9b02c6; Hm_lvt_a77691cb730c8dcad98ba43d333f5063=1503064397,1503064412,1503064659,1503064680; Hm_lpvt_a77691cb730c8dcad98ba43d333f5063=1503065794");
-                SetHost("www.ziyouge.com");
-            }
-            else
-            {
-                SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-                SetCookie("__cfduid=d4eea6ba24aed93761f72640003caa8741499590833; cf_clearance=8517be9645768b7e96357adceac88c30ed77c82c-1503065784-28800; yunsuo_session_verify=a87746c42f9b04cc7c6cdb88e64b40c0; Hm_lvt_a77691cb730c8dcad98ba43d333f5063=1503064397,1503064412,1503064659,1503064680; Hm_lpvt_a77691cb730c8dcad98ba43d333f5063=1503065851");
-                SetHost("www.ziyouge.com");
-            }
-            base.Load(isUTF8, bookId);
-        }
-
 
 
         /// <summary>
@@ -133,7 +114,7 @@ namespace NovelCollProject.plugin.web_ziyouge
             List<string> multipage = null;
             Regex reg;
             Match m;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//ul[@class='chapter-list']/li[@class='chapter']");
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//div[@id='readerlist']/ul/li");
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();
@@ -150,20 +131,6 @@ namespace NovelCollProject.plugin.web_ziyouge
                     ht.Add(CollectionFieldName.Chap_Title, title);
                     ht.Add(CollectionFieldName.Url, url);
                     ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
-                    //if (!string.IsNullOrEmpty(title))
-                    //{
-                    //    reg = new Regex(@"第(\d+)章");
-                    //    m = reg.Match(title);
-                    //    if (m.Success)
-                    //    {
-                    //        int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                    //        ht.Add(CollectionFieldName.Chap_SortOrder, order);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //}
-
 
                     links.Add(ht);
                 }
@@ -189,11 +156,11 @@ namespace NovelCollProject.plugin.web_ziyouge
             string tempInnerText = null;
             Regex tempReg = null;
             Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id=\"htmlContent\"]");
+            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
-                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script");
+                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script","dt");
                 //tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
                 tempString = tempString.Replace("\r\n", "").Replace("\t", "")
                     .Replace("本站访问地址http://www.ziyouge.com 任意搜索引擎内输入:紫幽阁 即可访问!", "")

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using NovelCollProjectutils;
 
-namespace NovelCollProject.plugin.web_ziyouge
+namespace NovelCollProject.plugin.web_bookbl
 {
     class Page : PageBase
     {
@@ -28,10 +28,11 @@ namespace NovelCollProject.plugin.web_ziyouge
         protected override void buildPageFeatureRules(PageFeature pageFeature)
         {
             pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:ziyouge.com/nonono$");
-            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:ziyouge.com/\w+/\d+/\d+/index.html\?chapterlist");
-            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:ziyouge.com/\w+/\d+/\d+/\d+.html");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:bookbl.com/\w+/\d+.html\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:bookbl.com/\w+/\d+/\d+.html");
             //pageFeature.InjectUrlRule(PageTypeEnum.DetailPage2, @"REG:hkslg520.com/\d+/\d+/\d+_\d+.html");
         }
+
 
 
         public override void Load(bool isUTF8, int bookId = 0)
@@ -39,17 +40,20 @@ namespace NovelCollProject.plugin.web_ziyouge
             if (PageFeature.MatchURL(Url) == PageTypeEnum.ListPage1)
             {
                 SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-                SetCookie("__cfduid=d4eea6ba24aed93761f72640003caa8741499590833; cf_clearance=8517be9645768b7e96357adceac88c30ed77c82c-1503065784-28800; yunsuo_session_verify=2b42ea40965fa1009ccdfc189a9b02c6; Hm_lvt_a77691cb730c8dcad98ba43d333f5063=1503064397,1503064412,1503064659,1503064680; Hm_lpvt_a77691cb730c8dcad98ba43d333f5063=1503065794");
-                SetHost("www.ziyouge.com");
+                SetCookie("__cfduid=d23b26ea705975793cfcc09049a058b9a1503146168; UM_distinctid=15dfa7e604965c-0aa2b550cc2ef2-3f63440c-1fa400-15dfa7e604ac5a; Hm_lvt_8bde26ba5d77afdacc8a675a10f06979=1503146172,1503146180,1503146186; Hm_lpvt_8bde26ba5d77afdacc8a675a10f06979=1503147058; CNZZDATA1256784909=901161271-1503146169-null%7C1503147055");
+                SetHost("www.bookbl.com");
             }
             else
             {
                 SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-                SetCookie("__cfduid=d4eea6ba24aed93761f72640003caa8741499590833; cf_clearance=8517be9645768b7e96357adceac88c30ed77c82c-1503065784-28800; yunsuo_session_verify=a87746c42f9b04cc7c6cdb88e64b40c0; Hm_lvt_a77691cb730c8dcad98ba43d333f5063=1503064397,1503064412,1503064659,1503064680; Hm_lpvt_a77691cb730c8dcad98ba43d333f5063=1503065851");
-                SetHost("www.ziyouge.com");
+                SetCookie("__cfduid=d23b26ea705975793cfcc09049a058b9a1503146168; UM_distinctid=15dfa7e604965c-0aa2b550cc2ef2-3f63440c-1fa400-15dfa7e604ac5a; Hm_lvt_8bde26ba5d77afdacc8a675a10f06979=1503146172,1503146180,1503146186; Hm_lpvt_8bde26ba5d77afdacc8a675a10f06979=1503147058; CNZZDATA1256784909=901161271-1503146169-null%7C1503147055");
+                SetHost("www.bookbl.com");
             }
             base.Load(isUTF8, bookId);
         }
+
+
+
 
 
 
@@ -133,7 +137,7 @@ namespace NovelCollProject.plugin.web_ziyouge
             List<string> multipage = null;
             Regex reg;
             Match m;
-            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//ul[@class='chapter-list']/li[@class='chapter']");
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//ul[@class='list-group']/li[@class='list-group-item col-xs-6 col-sm-4 col-md-3 col-lg-3 vv-book']");
             if (linkNodes != null)
             {
                 links = new List<Hashtable>();
@@ -150,20 +154,7 @@ namespace NovelCollProject.plugin.web_ziyouge
                     ht.Add(CollectionFieldName.Chap_Title, title);
                     ht.Add(CollectionFieldName.Url, url);
                     ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
-                    //if (!string.IsNullOrEmpty(title))
-                    //{
-                    //    reg = new Regex(@"第(\d+)章");
-                    //    m = reg.Match(title);
-                    //    if (m.Success)
-                    //    {
-                    //        int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                    //        ht.Add(CollectionFieldName.Chap_SortOrder, order);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //}
-
+                  
 
                     links.Add(ht);
                 }
@@ -189,7 +180,7 @@ namespace NovelCollProject.plugin.web_ziyouge
             string tempInnerText = null;
             Regex tempReg = null;
             Match tempMatch = null;
-            tempNode = documentNode.SelectSingleNode("//div[@id=\"htmlContent\"]");
+            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
             if (tempNode != null)
             {
                 tempString = tempNode.InnerHtml;
@@ -206,8 +197,13 @@ namespace NovelCollProject.plugin.web_ziyouge
                     .Replace("http", "")
                     .Replace("紫Ｙou阁 ＷwＷ.ZiyouＧＥ.com", "")
                     .Replace("WWw.ZiyoUgE.com", "")
-                   
-                    ;
+                    .Replace("WWw.ZiyoUgE.com", "")
+                    .Replace("?	?t5矺?z?@2(\'|珛o[m?:sΞz嶞???5|??4", "")
+                    .Replace("t5矺?z?@2(\'|珛o[m?:sΞz嶞???5|??4", "")
+                    .Replace("?  ? t5矺 ? z ?@2(\'|珛o[m?:sΞz嶞???5|??4", "")
+                    
+    
+                        ;
 
                 //正则替换域名
                 string pattern = @"(?=.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+";

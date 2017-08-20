@@ -107,6 +107,11 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_d9cn\web_d9cn.cs" />
+    <Compile Include="plugin\web_52bqg\web_52bqg.cs" />
+    <Compile Include="plugin\web_wuruo\web_wuruo.cs" />
+    <Compile Include="plugin\web_23qb\web_23qb.cs" />
+    <Compile Include="plugin\web_bookbl\web_bookbl.cs" />
     <Compile Include="plugin\web_zwdu\web_zwdu.cs" />
     <Compile Include="plugin\web_shoujikanshu\web_shoujikanshu.cs" />
     <Compile Include="plugin\web_freexs\web_freexs.cs" />

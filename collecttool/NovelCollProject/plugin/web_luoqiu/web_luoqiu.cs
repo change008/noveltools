@@ -32,6 +32,23 @@ namespace NovelCollProject.plugin.web_luoqiu
             pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:luoqiu.com/\w+/\d+/\d+.html");
         }
 
+        public override void Load(bool isUTF8, int bookId = 0)
+        {
+            if (PageFeature.MatchURL(Url) == PageTypeEnum.ListPage1)
+            {
+                SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
+                SetCookie("__cfduid=d12efff8d5351e89b3c31e3b4b99bcf621503147450; UM_distinctid=15dfa91f9fa4ad-0f1be94c203b7a-3f63440c-1fa400-15dfa91f9fbb67; scrollspeed=5; CNZZDATA1257366169=1877948417-1503147026-null%7C1503206426");
+                SetHost("www.luoqiu.com");
+            }
+            else
+            {
+                SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
+                SetCookie("__cfduid=d12efff8d5351e89b3c31e3b4b99bcf621503147450; UM_distinctid=15dfa91f9fa4ad-0f1be94c203b7a-3f63440c-1fa400-15dfa91f9fbb67; scrollspeed=5; CNZZDATA1257366169=1877948417-1503147026-null%7C1503206426");
+                SetHost("www.luoqiu.com");
+            }
+            base.Load(isUTF8, bookId);
+        }
+
 
         /// <summary>
         /// 解析页面内容
@@ -161,6 +178,9 @@ namespace NovelCollProject.plugin.web_luoqiu
         /// <returns></returns>
         private Hashtable parseDetailPage1(HtmlNode documentNode)
         {
+
+            System.Threading.Thread.Sleep(new Random((int)DateTime.Now.Ticks).Next(8000, 30000));
+
             List<string> multipage = null;
             Hashtable returndata = new Hashtable();
             HtmlNode tempNode = null;
