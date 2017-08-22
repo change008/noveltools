@@ -198,6 +198,8 @@ namespace NovelCollProject.plugin.web_yikanxiaoshuo
                     .Replace("\"易看小说\"", "")
                     .Replace("易看小说", "")
                     .Replace("免费小说", "")
+                    .Replace("(更快免费阅读加微信：jxxs9966)", "")
+                    .Replace("jxxs9966", "")
                     ;
 
                 returndata.Add(CollectionFieldName.Chap_Content, tempString);
