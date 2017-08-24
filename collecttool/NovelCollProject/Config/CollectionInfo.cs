@@ -374,7 +374,7 @@ namespace NovelCollProject
             "nothing", false);
 
         /// <summary>
-        /// 男公关回忆录 原名 我做男公关的那几年_1022--连载中, 
+        /// 男公关回忆录 原名 我做男公关的那几年_1022--完结, 
         /// </summary>
         public static CollectionModel model_1022 = new CollectionModel(
             2,
@@ -807,6 +807,12 @@ namespace NovelCollProject
 
         
     }
+
+
+    /*采集配置列表
+    -c  1002,1005,1007,1008,1009,1010,1012,1017,1018,1019,1020,1021,1023,1024,1032,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1046,1049,1061,1062,1063,1066,1067,1068,1069
+        */
+
 
     /// <summary>
     /// 采集model
