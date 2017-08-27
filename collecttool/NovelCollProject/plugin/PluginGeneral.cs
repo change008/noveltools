@@ -143,6 +143,11 @@ namespace NovelCollProject.plugin
                             buildModel(nextChapter);
                         }
 
+                        if (string.IsNullOrEmpty(nextChapter.Id))
+                        {
+                            throw new Exception("没有采集到章节id数据");
+                        }
+
                         publishBiz.doSubmitChapter(nextChapter);
 
                         //提交完后错误计数重置

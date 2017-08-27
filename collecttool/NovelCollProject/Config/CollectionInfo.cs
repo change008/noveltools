@@ -63,6 +63,9 @@ namespace NovelCollProject
 
             CollctionModelList.Add(model_1048);
             CollctionModelList.Add(model_1049);
+            CollctionModelList.Add(model_1050);
+
+            CollctionModelList.Add(model_1052);
 
             //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
@@ -674,6 +677,39 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing");
+
+        /// <summary>
+        /// 华佗宝典 原名 小乡村的绝色诱惑_1050--完结, 
+        /// </summary>
+        public static CollectionModel model_1050 = new CollectionModel(
+            1,
+            "web_feizw",
+            "http://www.feizw.com/Html/5827/index.html?chapterlist",
+            1050,
+            "华佗宝典",
+            @"华佗宝典...",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing");
+
+
+        /// <summary>
+        /// 极品都市高手 原名 天才高手在都市_1052--完结, 
+        /// </summary>
+        public static CollectionModel model_1052 = new CollectionModel(
+            1,
+            "web_kanshula",
+            "http://www.kanshula.com/book/tiancaigaoshouzaidoushi/?chapterlist",
+            1052,
+            "极品高手",
+            @"会点小武功，懂点小医术，有点不要脸，少年秋羽来到大都市充当校花保镖，当寂寞的世界出现清纯小萝莉，娇蛮警花，白领丽人，妩媚大明星等诸多美女，不断的擦出火花，暧昧丛生，他能否守身如玉，继续纯洁……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
 
         /// <summary>
         /// 张狂的青春 原名 第一次亲密接触_1060--完结 -- 无法采集
