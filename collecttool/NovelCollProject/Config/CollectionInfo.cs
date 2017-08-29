@@ -66,6 +66,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1050);
 
             CollctionModelList.Add(model_1052);
+            CollctionModelList.Add(model_1053);
 
             //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
@@ -694,7 +695,7 @@ namespace NovelCollProject
 
 
         /// <summary>
-        /// 极品都市高手 原名 天才高手在都市_1052--完结, 
+        /// 极品都市高手 原名 天才高手在都市_1052--连载, 
         /// </summary>
         public static CollectionModel model_1052 = new CollectionModel(
             1,
@@ -707,6 +708,22 @@ namespace NovelCollProject
             "nothing",
             "nothing",
             true
+            );
+
+
+        /// <summary>
+        /// 美女到我手里来 原名 美女到我碗里来_1053--连载, 
+        /// </summary>
+        public static CollectionModel model_1053 = new CollectionModel(
+            1,
+            "web_vodtw",
+            "http://www.vodtw.com/html/book/19/19092/index.html?chapterlist",
+            1053,
+            "美女到我手里来",
+            @"小医师林逸巧施妙手解决了小柳村的疑难杂症，然后到了大都市，这里有刁蛮未婚妻、可爱小萝莉还有娇弱病美人，就此展开了波澜万丈的医道人生。……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing"
             );
 
 
