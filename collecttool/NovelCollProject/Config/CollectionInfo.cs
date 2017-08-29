@@ -67,6 +67,7 @@ namespace NovelCollProject
 
             CollctionModelList.Add(model_1052);
             CollctionModelList.Add(model_1053);
+            CollctionModelList.Add(model_1054);
 
             //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
@@ -721,6 +722,22 @@ namespace NovelCollProject
             1053,
             "美女到我手里来",
             @"小医师林逸巧施妙手解决了小柳村的疑难杂症，然后到了大都市，这里有刁蛮未婚妻、可爱小萝莉还有娇弱病美人，就此展开了波澜万丈的医道人生。……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing"
+            );
+
+
+        /// <summary>
+        /// 桃运升迁路 原名 仕途红颜：桃运无双_1054--完结, 
+        /// </summary>
+        public static CollectionModel model_1054 = new CollectionModel(
+            2,
+            "web_wanben",
+            "http://www.wanben.me/xiaoshuo/295/?chapterlist",
+            1054,
+            "桃运升迁路",
+            @"红二代的罗天运和农二代的马英杰，如何借力一步一步走上权力顶峰。……",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
             "nothing"
