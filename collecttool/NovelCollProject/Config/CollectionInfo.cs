@@ -68,6 +68,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1052);
             CollctionModelList.Add(model_1053);
             CollctionModelList.Add(model_1054);
+            CollctionModelList.Add(model_1055);
 
             //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
@@ -742,6 +743,24 @@ namespace NovelCollProject
             "nothing",
             "nothing"
             );
+
+
+        /// <summary>
+        /// 千娇百媚 原名 仕途红颜：桃运无双_1055--完结, 
+        /// </summary>
+        public static CollectionModel model_1055 = new CollectionModel(
+            2,
+            "web_aoyo",
+            "http://www.aoyo.org/book/20698.html?chapterlist",
+            1055,
+            "千娇百媚",
+            @"最近qq不是出了个红包口令么？就是说出“指定的话”，才能领取红包。原本呢，这红包口令就是大伙用来娱乐的，装逼泡妞。我也发了一个，没想到真钓上了一个美女！更让人傻眼的是，这个美女还是我的...……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
 
 
 
