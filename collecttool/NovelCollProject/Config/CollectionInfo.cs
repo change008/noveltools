@@ -69,6 +69,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1053);
             CollctionModelList.Add(model_1054);
             CollctionModelList.Add(model_1055);
+            CollctionModelList.Add(model_1056);
 
             //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
@@ -761,6 +762,20 @@ namespace NovelCollProject
             true
             );
 
+        /// <summary>
+        /// 夜玫瑰之歌 原名 爱上夜玫瑰_1056--连载, 
+        /// </summary>
+        public static CollectionModel model_1056 = new CollectionModel(
+            1,
+            "web_xiangcunxiaoshuo",
+            "http://www.xiangcunxiaoshuo.com/html/410377/?chapterlist",
+            1056,
+            "夜玫瑰之歌",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing"
+            );
 
 
 
