@@ -70,6 +70,8 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1054);
             CollctionModelList.Add(model_1055);
             CollctionModelList.Add(model_1056);
+            CollctionModelList.Add(model_1057);
+            
 
             //CollctionModelList.Add(model_1060);
             CollctionModelList.Add(model_1061);
@@ -81,22 +83,37 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1067);
             CollctionModelList.Add(model_1068);
             CollctionModelList.Add(model_1069);
+            CollctionModelList.Add(model_1070);
+            CollctionModelList.Add(model_1071);
         }
 
         #region 采集小说配置
         /// <summary>
         /// 春野小村医_1002 连载中 
         /// </summary>
+        //public static CollectionModel model_1002 = new CollectionModel(
+        //    1,
+        //    "web_hkslg520",
+        //    "http://www.hkslg520.com/167/167695/?chapterlist",
+        //    1002,
+        //    "春野小村医",
+        //    @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
+        //    "http://m.hkslg520.com/modules/article/images/nocover.jpg",
+        //    "chunyexiaocunyi",
+        //    "nothing");
+
         public static CollectionModel model_1002 = new CollectionModel(
             1,
-            "web_hkslg520",
-            "http://www.hkslg520.com/167/167695/?chapterlist",
+            "web_23us",
+            "http://www.23us.cc/html/201/201390/?chapterlist",
             1002,
             "春野小村医",
             @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
             "http://m.hkslg520.com/modules/article/images/nocover.jpg",
             "chunyexiaocunyi",
-            "nothing");
+            "nothing", true);
+
+
 
         //public static CollectionModel model_1002 = new CollectionModel(
         //    1,
@@ -777,6 +794,23 @@ namespace NovelCollProject
             "nothing"
             );
 
+        /// <summary>
+        /// 我的漂亮女领导 原名 办公室诱惑：漂亮女上司_1057--连载, 
+        /// </summary>
+        public static CollectionModel model_1057 = new CollectionModel(
+            1,
+            "web_sangwu",
+            "http://www.sangwu.org/book/1/1293/?chapterlist",
+            1057,
+            "我的漂亮女领导",
+            @"应酬中酒里被下了药，阴错阳差的，公司里最下等的小职员杨锐与神态娇媚、雍容华贵却又心狠手辣、丧尽天良、灭绝人性的野蛮上司发生了关系……模特出身的女上司，一个口无遮...……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing"
+            );
+
+
+        
 
 
         /// <summary>
@@ -909,7 +943,39 @@ namespace NovelCollProject
             "nothing",
             "nothing");
 
-        
+
+        /// <summary>
+        /// 御女说 原名 御女天下_1070--连载, 
+        /// </summary>
+        public static CollectionModel model_1070 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1579.aspx?chapterlist",
+            1070,
+            "御女说",
+            @"一个特种兵王回归都市，在这个花花都市中他将卷入无数的艳遇之中，白领，护士，警花，军花，妩媚少妇，成熟美 妇，高高在上的商场女强人，还是拥有无数粉丝的女明星！……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 都市猎艳 原名 福艳之都市后宫_1071--连载, 
+        /// </summary>
+        public static CollectionModel model_1071 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/2729.aspx?chapterlist",
+            1071,
+            "都市猎艳",
+            @"家族背后有着庞大的势力，这个小男孩开始了成长的经历。偌大的都市，拥有着无穷的诱惑。金钱，地位，权利！当拥有着这三种所有人都渴望的优势之后，他的生活会是怎么样的呢？在美女如云的都市之中，恣意风流，嬉游花丛！……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
     }
 
 

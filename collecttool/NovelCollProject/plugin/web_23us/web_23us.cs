@@ -1,0 +1,266 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using HtmlAgilityPack;
+using NovelCollProjectutils;
+
+namespace NovelCollProject.plugin.web_23us
+{
+    class Page : PageBase
+    {
+        private static string[] RY = new string[]
+        {
+            "//script"
+        };
+
+        public object HtmlUtil { get; private set; }
+
+
+
+        /// <summary>
+        ///添加页面特征规则 
+        /// </summary>
+        /// <param name="pageFeature"></param>
+        protected override void buildPageFeatureRules(PageFeature pageFeature)
+        {
+            pageFeature.InjectUrlRule(PageTypeEnum.StartupPage, @"REG:sangwu.org/nonono$");
+            pageFeature.InjectUrlRule(PageTypeEnum.ListPage1, @"REG:23us.cc/\w+/\d+/\d+/\?chapterlist");
+            pageFeature.InjectUrlRule(PageTypeEnum.DetailPage1, @"REG:23us.cc/\w+/\d+/\d+/\d+.htm");
+        }
+
+
+        //public override void Load(bool isUTF8, int bookId = 0)
+        //{
+        //    if (PageFeature.MatchURL(Url) == PageTypeEnum.ListPage1)
+        //    {
+        //        SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
+        //        SetCookie("jieqiVisitId=article_articleviews%3D1293; background=bg_lan; fontFamily=fam_hei; fontSize=fon_24; UM_distinctid=15e3dea7c607ee-01ee6e8b9c796-3f63450e-1fa400-15e3dea7c61b14; CNZZDATA1260070930=308938530-1504276205-%7C1504276205; BLR=1/1293%23430965%23%u529E%u516C%u5BA4%u8BF1%u60D1%uFF1A%u6F02%u4EAE%u5973%u4E0A%u53F8%23%u7AE0%u8282%u76EE%u5F55%20%u7B2C1%u7AE0%20%u90FD%u662F%u201C%u5077%u7AA5%u201D%u60F9%u7684%u7978");
+        //        SetHost("www.sangwu.org");
+        //    }
+        //    else
+        //    {
+        //        SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
+        //        SetCookie("jieqiVisitId=article_articleviews%3D1293; background=bg_lan; fontFamily=fam_hei; fontSize=fon_24; UM_distinctid=15e3dea7c607ee-01ee6e8b9c796-3f63450e-1fa400-15e3dea7c61b14; CNZZDATA1260070930=308938530-1504276205-%7C1504276205; BLR=1/1293%23430965%23%u529E%u516C%u5BA4%u8BF1%u60D1%uFF1A%u6F02%u4EAE%u5973%u4E0A%u53F8%23%u7AE0%u8282%u76EE%u5F55%20%u7B2C1%u7AE0%20%u90FD%u662F%u201C%u5077%u7AA5%u201D%u60F9%u7684%u7978");
+        //        SetHost("www.sangwu.org");
+        //    }
+        //    base.Load(isUTF8, bookId);
+        //}
+
+
+
+        /// <summary>
+        /// 解析页面内容
+        /// </summary>
+        /// <param name="htmlstring"></param>
+        protected override void parseHtmlString(string htmlstring, int bookId = 0)
+        {
+            HtmlDocument document = new HtmlDocument();
+            document.LoadHtml(htmlstring);
+            switch (PageType)
+            {
+                case PageTypeEnum.StartupPage:
+                    FinalData = parseStartupPage(document.DocumentNode);
+                    break;
+                case PageTypeEnum.ListPage1:
+                    FinalData = parseListPage(document.DocumentNode);
+                    break;
+                case PageTypeEnum.DetailPage1:
+                    FinalData = parseDetailPage1(document.DocumentNode);
+                    break;
+                case PageTypeEnum.DetailPage2:
+                    FinalData = parseDetailPage2(document.DocumentNode);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 解析开始页
+        /// </summary>
+        /// <param name="documentNode"></param>
+        /// <returns></returns>
+        private Hashtable parseStartupPage(HtmlNode documentNode)
+        {
+            Hashtable ht = new Hashtable();
+            Regex tempReg = null;
+            Match tempMatch = null;
+            HtmlNode linkNodes = documentNode.SelectSingleNode("//uv[@class='chapter-list']/li[@class='chapter']");
+            if (linkNodes != null)
+            {
+                var title = linkNodes.InnerText;
+                ht.Add(CollectionFieldName.Novel_Name, title);
+            }
+            linkNodes = documentNode.SelectSingleNode("//div[@id='fmimg']/img");
+            if (linkNodes != null)
+            {
+                var imgUrl = linkNodes?.GetAttributeValue("src", "");
+                ht.Add(CollectionFieldName.Novel_CoverImgs, imgUrl);
+            }
+            linkNodes = documentNode.SelectSingleNode("//meta[@property='og:novel:category']");
+            if (linkNodes != null)
+            {
+                var tag = linkNodes?.GetAttributeValue("content", "");
+                ht.Add(CollectionFieldName.Novel_Tag, tag);
+            }
+           
+            var url = InternalRealUrl + "?chapter=";
+            ht.Add(CollectionFieldName.Url, url);
+           
+            tempReg = new Regex(@"/(\w+)/$");
+            tempMatch = tempReg.Match(InternalRealUrl);
+            if (tempMatch.Success)
+            {
+                ht.Add(CollectionFieldName.Novel_UniqueFlag, tempReg.Replace(tempMatch.Value, "$1"));
+            }
+            Hashtable returndata = new Hashtable();
+            if (ht != null)
+                returndata.Add(CollectionFieldName.BookInfo, ht);
+            return returndata;
+        }
+
+        /// <summary>
+        /// 解析列表页内容--解析章节列表数据
+        /// </summary>
+        /// <param name="documentNode"></param>
+        /// <returns></returns>
+        private Hashtable parseListPage(HtmlNode documentNode)
+        {
+            List<Hashtable> links = null;
+            List<string> multipage = null;
+            Regex reg;
+            Match m;
+            HtmlNodeCollection linkNodes = documentNode.SelectNodes("//dl[@class='chapterlist']/dd");
+            if (linkNodes != null)
+            {
+                links = new List<Hashtable>();
+                foreach (var liNode in linkNodes)
+                {
+                    var title = liNode.SelectSingleNode("a")?.InnerText;
+                    var url = liNode.SelectSingleNode("a")?.GetAttributeValue("href", "");
+                    if (string.IsNullOrEmpty(url))
+                        continue;
+                    reg = new Regex(@"(\d+).html");
+                    m = reg.Match(url);
+                    string flag = reg.Replace(m.Value, "$1");
+                    Hashtable ht = new Hashtable();
+                    ht.Add(CollectionFieldName.Chap_Title, title);
+                    ht.Add(CollectionFieldName.Url, url);
+                    ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
+
+                    links.Add(ht);
+                }
+            }
+            
+
+            Hashtable returndata = new Hashtable();
+            if (links != null)
+                returndata.Add(CollectionFieldName.Items, links);
+            if (multipage != null)
+                returndata.Add(CollectionFieldName.Pages, multipage);
+            return returndata;
+        }
+        /// <summary>
+        /// 解析明细页内容
+        /// </summary>
+        /// <param name="documentNode"></param>
+        /// <returns></returns>
+        private Hashtable parseDetailPage1(HtmlNode documentNode)
+        {
+            List<string> multipage = null;
+            Hashtable returndata = new Hashtable();
+            HtmlNode tempNode = null;
+            string tempString = null;
+            string tempInnerText = null;
+            Regex tempReg = null;
+            Match tempMatch = null;
+            tempNode = documentNode.SelectSingleNode("//div[@id='content']");
+            if (tempNode != null)
+            {
+                tempString = tempNode.InnerHtml;
+                tempString = HTMLUtil.RemoveHtmlContent(tempString, "div", "style", "script","dt","a");
+                tempString = tempString.ToLower();
+                //tempString = HTMLUtil.RemoveHtmlTag(tempString, "p", "img", "br");
+                tempString = tempString.Replace("\r\n", "").Replace("\t", "")
+                    .Replace("本站访问地址http://www.ziyouge.com 任意搜索引擎内输入:紫幽阁 即可访问!", "")
+                    .Replace("http://www.ziyouge.com", "")
+                    .Replace("紫幽阁", "")
+                    .Replace("wanben.me", "")
+                    .Replace("ziyouge.com", "")
+                    .Replace("ziyouge", "")
+                    .Replace("http://", "")
+                    .Replace("http", "")
+                    .Replace("紫Ｙou阁 ＷwＷ.ZiyouＧＥ.com", "")
+                    .Replace("WWw.ZiyoUgE.com", "")
+                    .Replace("品书网", "")
+                    .Replace("www.vodtw.com", "")
+                    .Replace("本书来自", "")
+                    .Replace("/html/book/19/19092/","")
+                    .Replace("大家想继续看我的书，可以加我微信gdy3208新书出了，我会第一时间发动态通知大家！","")
+                    .Replace("本站重要通知:请使用本站的免费小说app,无广告、破防盗版、更新快,会员同步书架,请关注微信公众号 appxsyd (按住三秒复制) 下载免费阅读器!!","")
+                    .Replace("本站重要通知: 请使用本站的免费小说app,无广告、破防盗版、更新快,会员同步书架,请关注微信公众号 gegegengxin (按住三秒复制)下载免费阅读器!!", "")
+                    .Replace("本站重要通知:", "")
+                    .Replace("请使用本站的免费小说", "")
+                    .Replace("app", "")
+                    .Replace("无广告、破防盗版、更新快,会员同步书架", "")
+                    .Replace("请关注微信公众号", "")
+                    .Replace("appxsyd", "")
+                    .Replace("gegegengxin", "")
+                    .Replace("(按住三秒复制)", "")
+                    .Replace("(按住三秒复制)", "")
+                    .Replace("下载免费阅读器", "")
+                ;             
+
+                  //正则替换域名
+                  string pattern = @"(?=.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+";
+                tempString = Regex.Replace(tempString, pattern, "");
+
+                string pattern1 = @"&lt;.+&gt;";
+                tempString = Regex.Replace(tempString, pattern1, "");
+
+                returndata.Add(CollectionFieldName.Chap_Content, tempString);
+
+                //移除无效字符,用来计算长度
+                tempInnerText = HTMLUtil.RemoveHtmlTag(tempString).Replace("&nbsp;", "").Replace("feisuz", "")
+                    .Replace("作者的话:", "").Replace("新书，求收藏求推荐", "").Replace("本书红薯网首发,请勿转载!", "");
+                if (!string.IsNullOrEmpty(tempInnerText))
+                {
+                    returndata.Add(CollectionFieldName.Chap_ContentLen, tempInnerText.Length);
+                    string into = "";
+                    if (tempInnerText.Length > 40)
+                    {
+                        into = tempInnerText.Substring(0, 40) + "...";
+                    }
+                    else
+                    {
+                        into = tempInnerText;
+                    }
+                    returndata.Add(CollectionFieldName.Chap_Intro, into);
+                    int price = (tempString.Length / 1000) * 5;
+                    if (price == 0)
+                        price = 5;
+                    if (price > 15)
+                        price = 15;
+                    returndata.Add(CollectionFieldName.Chap_Pirce, price);
+                }
+                returndata.Add(CollectionFieldName.Chap_Status, ChapterStatus.ChapterStatus_OnLine);
+                returndata.Add(CollectionFieldName.Chap_ChapterType, ChapterType.ChapterType_Free);
+                tempInnerText = tempNode.InnerText;
+
+            }
+            return returndata;
+        }
+
+        /// <summary>
+        /// 解析明细页内容
+        /// </summary>
+        /// <param name="documentNode"></param>
+        /// <returns></returns>
+        private Hashtable parseDetailPage2(HtmlNode documentNode)
+        {
+            return null;
+        }
+    }
+}
