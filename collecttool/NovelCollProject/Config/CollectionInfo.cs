@@ -85,6 +85,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1069);
             CollctionModelList.Add(model_1070);
             CollctionModelList.Add(model_1071);
+            CollctionModelList.Add(model_1072);
         }
 
         #region 采集小说配置
@@ -970,6 +971,22 @@ namespace NovelCollProject
             1071,
             "都市猎艳",
             @"家族背后有着庞大的势力，这个小男孩开始了成长的经历。偌大的都市，拥有着无穷的诱惑。金钱，地位，权利！当拥有着这三种所有人都渴望的优势之后，他的生活会是怎么样的呢？在美女如云的都市之中，恣意风流，嬉游花丛！……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 无上通天录 原名 极乐宝典_1072--连载, 
+        /// </summary>
+        public static CollectionModel model_1072 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1185.aspx?chapterlist",
+            1072,
+            "无上通天录",
+            @"一个原本平庸的少年，撞上5000年一遇的狗屎运，得到了上古仙人留下的一套秘典和法宝，让他从一个庸才很快变成超级天才，逐渐拥有傲世的力量，不过嘛---修炼过程有些“副作用”--没办法，为了消除这个“副作用”，成就无上大道，他不得不在花花都市中采香品艳，狂揽众美。狐媚女，御姐，极品校花，纯情美女，绝色女警，冷艳女杀手，深闺美怨妇，甚至是九天仙女……不同的女人，主角自然会有不同的勾诱和征服之法……招招精彩……",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
             "nothing",
