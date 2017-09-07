@@ -86,6 +86,9 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1070);
             CollctionModelList.Add(model_1071);
             CollctionModelList.Add(model_1072);
+            CollctionModelList.Add(model_1073);
+            CollctionModelList.Add(model_1074);
+            CollctionModelList.Add(model_1075);
         }
 
         #region 采集小说配置
@@ -987,6 +990,54 @@ namespace NovelCollProject
             1072,
             "无上通天录",
             @"一个原本平庸的少年，撞上5000年一遇的狗屎运，得到了上古仙人留下的一套秘典和法宝，让他从一个庸才很快变成超级天才，逐渐拥有傲世的力量，不过嘛---修炼过程有些“副作用”--没办法，为了消除这个“副作用”，成就无上大道，他不得不在花花都市中采香品艳，狂揽众美。狐媚女，御姐，极品校花，纯情美女，绝色女警，冷艳女杀手，深闺美怨妇，甚至是九天仙女……不同的女人，主角自然会有不同的勾诱和征服之法……招招精彩……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 魂者 原名 阴阳代理人_1073--连载, 
+        /// </summary>
+        public static CollectionModel model_1073 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1929.aspx?chapterlist",
+            1073,
+            "魂者",
+            @"十岁那年我第一次看见阴差收魂,从此以后走上了阴阳代理人的道路。湘西赶尸,召唤嬴政之魂,捕捉千年妖怪,跨国猎杀变异妖魔……我将带你走进华夏大陆不为人知的一面,我将带你看见你无法想象过的神奇经历！我是阴阳代理人,我是真实存在的招魂者。……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 合修霸少 原名 校园至尊强少_1074--连载, 
+        /// </summary>
+        public static CollectionModel model_1074 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4684.aspx?chapterlist",
+            1074,
+            "合修霸少",
+            @"一普通学生偶获阴阳神功，自此，阴阳合修，校园校外崛起称霸。他徘徊于正义与邪恶之间，不管男女他都能吸为已用。而拥有第一特工身份的嫂子如谜般神秘，保护他亦被他保护…………",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 都市猎美记 原名 都市娇妻之美女后宫_1075--连载, 
+        /// </summary>
+        public static CollectionModel model_1075 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/3011.aspx?chapterlist",
+            1075,
+            "都市猎美记",
+            @"一个个尽显万种风情!更多美女更大后宫,尽在本书………",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
             "nothing",
