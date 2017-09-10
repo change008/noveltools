@@ -89,6 +89,9 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1073);
             CollctionModelList.Add(model_1074);
             CollctionModelList.Add(model_1075);
+            CollctionModelList.Add(model_1076);
+            CollctionModelList.Add(model_1077);
+            CollctionModelList.Add(model_1078);
         }
 
         #region 采集小说配置
@@ -1038,6 +1041,55 @@ namespace NovelCollProject
             1075,
             "都市猎美记",
             @"一个个尽显万种风情!更多美女更大后宫,尽在本书………",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 极品女校长 原名 我的绝美女校长_1076--连载, 
+        /// </summary>
+        public static CollectionModel model_1076 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4637.aspx?chapterlist",
+            1076,
+            "极品女校长",
+            @"特种军医回归都市，成为大学校医，惨遭绝美校长霸占，成为软饭男友！给校花做人工呼吸，她居然要以身相许？美少妇以病为由，天天骚扰？“军花，别这样，大家都是成年人，你这样倒追，我把持不住！”………",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+        /// <summary>
+        /// 透视极品 原名 绝品透视_1077--连载, 
+        /// </summary>
+        public static CollectionModel model_1077 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4618.aspx?chapterlist",
+            1077,
+            "透视极品",
+            @"意外触电，获得透视能力，王洋一飞冲天。 赌石，让他赚取万贯家财，治病，让他获得万古之名，强身，让他成为古武第一人…… 钱可以少赚，美女必须先看，透视能力大开，王洋注视着一名名过往美女如是道。………",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 极品先生 原名 极品风水师_1078--连载, 
+        /// </summary>
+        public static CollectionModel model_1078 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4536.aspx?chapterlist",
+            1078,
+            "极品先生",
+            @"风水秘术，卜算天机，无一不通，无一不精！ 抽烟喝酒，吃喝玩乐，不是不想戒，唉，人在江湖身不由己啊！………",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
             "nothing",
