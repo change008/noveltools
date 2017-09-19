@@ -92,6 +92,20 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1076);
             CollctionModelList.Add(model_1077);
             CollctionModelList.Add(model_1078);
+            CollctionModelList.Add(model_1079);
+
+            CollctionModelList.Add(model_1080);
+            CollctionModelList.Add(model_1081);
+            CollctionModelList.Add(model_1082);
+            CollctionModelList.Add(model_1083);
+            CollctionModelList.Add(model_1084);
+            CollctionModelList.Add(model_1085);
+            CollctionModelList.Add(model_1086);
+
+            CollctionModelList.Add(model_1087);
+            CollctionModelList.Add(model_1088);
+            CollctionModelList.Add(model_1089);
+            CollctionModelList.Add(model_1090);
         }
 
         #region 采集小说配置
@@ -1090,6 +1104,207 @@ namespace NovelCollProject
             1078,
             "极品先生",
             @"风水秘术，卜算天机，无一不通，无一不精！ 抽烟喝酒，吃喝玩乐，不是不想戒，唉，人在江湖身不由己啊！………",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 权利的秘密 原名 青云直上_1079--完结, 
+        /// </summary>
+        public static CollectionModel model_1079 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4729.aspx?chapterlist",
+            1079,
+            "权利的秘密",
+            @"为官之本在于造福一方，为官之理在于奉献，为官之德在于清廉，为官之义在于明法，叶平宇以草根之身投入官场，面对财色权，守住本心，步步谋划，终于走出一条官场的康庄大道，从此一朝直上青云路，锦衣还眉扬气吐！……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 我的霸道女总裁 原名 我的妖孽女总裁_1080--完结, 
+        /// </summary>
+        public static CollectionModel model_1080 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4723.aspx?chapterlist",
+            1080,
+            "我的霸道女总裁",
+            @"有着神医兵王称号的叶丰回归都市，阴差阳错成为了妖孽女总裁的未婚夫。更要命的是风情女老大，邻家女校花，知性女主管，飒爽女警花，各色各样的美女们纷至沓来。从此被各种红粉事端纠缠不断，谱写了一段属于他的都市韵事……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 抽奖系统 原名 超级抽奖系统_1081--完结, 
+        /// </summary>
+        public static CollectionModel model_1081 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4707.aspx?chapterlist",
+            1081,
+            "抽奖系统",
+            @"无意间得到一台老虎机，第一次抽奖，竟然就抽中了一个妹子……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 保镖会医术 原名 超级保镖_1082--完结, 
+        /// </summary>
+        public static CollectionModel model_1082 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4698.aspx?chapterlist",
+            1082,
+            "保镖会医术",
+            @"保镖会医术，谁也挡不住！他，只身一人来到大城市，却造福了无数的美女……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 贴身高手 原名 花都贴身高手 _1083--完结, 
+        /// </summary>
+        public static CollectionModel model_1083 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4668.aspx?chapterlist",
+            1083,
+            "贴身高手",
+            @"少年刘天睿，奉旨下山保护江城第一大美人，这美人竟是他的未婚妻！刘天睿擦掉口水，他犹豫了……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 人生大玩家 原名 我是大玩家 _1084--完结, 
+        /// </summary>
+        public static CollectionModel model_1084 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4641.aspx?chapterlist",
+            1084,
+            "人生大玩家",
+            @"系统，你敢不敢不搞事情了？我特么可能是个假的穿越者！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 都市兵王 原名 功夫兵王 _1085--完结, 
+        /// </summary>
+        public static CollectionModel model_1085 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4655.aspx?chapterlist",
+            1085,
+            "都市兵王",
+            @"从小习武，在欧洲暗黑世界称神的萧衍，忽然接到了归国任务，任务的主要内容，竟然是保护娇滴滴的女总裁。而女总裁，也渐渐的开始迷恋萧衍，甚至常常做些挑逗的动作。这却让萧衍头疼不已，因为公司第一条准则，就是：不能与雇主发生性关系",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 超级网店系统 原名 网货供应商 _1086--完结, 
+        /// </summary>
+        public static CollectionModel model_1086 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4674.aspx?chapterlist",
+            1086,
+            "超级网店系统",
+            @"一不小心系统入体，我从而开始在小村子里开了一家网店。
+　　店里一件看上去很普通的女装，售价近万元，但很多买家却不得不熬夜抢购。
+　　任何美女买家土豪买家都不能例外。
+　　再急的件我也只能发邮政小包，等不及那就别买。
+　　什么，你是美女大明星？那也不能开后门，除非…………",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 重生李二蛋 原名 丐世神医_1087--完结, 
+        /// </summary>
+        public static CollectionModel model_1087 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4612.aspx?chapterlist",
+            1087,
+            "重生李二蛋",
+            @"从小就不走正道的李二蛋被雷劈死了，又被雷劈重生，因祸得福有了异能，穿墙术，飞檐走壁，还有一手绝世好医术。
+　　且看李二蛋如何纵横都市，发扬中医。各色美女当然少不了，有校花，有空姐，有富家千金，还有成熟端庄秀丽的美少妇，……。
+　　吸血鬼族，史前巨兽，世界未解之谜一网打尽，打斗场面精彩无限。融合各种题材的史诗巨片，不容错过。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 农场提现系统 原名 我的农场能提现_1088--完结, 
+        /// </summary>
+        public static CollectionModel model_1088 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4583.aspx?chapterlist",
+            1088,
+            "农场提现系统",
+            @"在大学毕业离校的前一天，生态农业专业的王汉突然发现，自己的企鹅农场和牧场都变异了。
+　　它不仅能将种植的水果、蔬菜、动物等实物化到身边，而且，它所赚的金币，居然能提现！
+　　提现哦！
+　　而且是一金币兑一元华夏币哦！
+　　王汉深深吸一口气，然后狂喜。
+　　发了，发了！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 超级少年 原名 都市超级少年_1089--完结, 
+        /// </summary>
+        public static CollectionModel model_1089 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4586.aspx?chapterlist",
+            1089,
+            "超级少年",
+            @"一手夺命医术，一身绝世功法，天才少年自深山中而来。
+　　生性腼腆的他，不怕和死亡对决。 
+　　为寻找师姐，保护各路美女，一路杀伐果断纵横都市。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 巫族 原名 闲巫在都市_1090--完结, 
+        /// </summary>
+        public static CollectionModel model_1090 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4635.aspx?chapterlist",
+            1090,
+            "巫族",
+            @"周昊，华医世家的小天才，宅男，上古巫祖传承者。本胸无大志，随遇而安的性子，却不经意中成为各种势力的角力点，而他的本意，仅仅是自己闲的时候随便做点事情。",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
             "nothing",

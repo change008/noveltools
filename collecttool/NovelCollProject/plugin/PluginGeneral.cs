@@ -343,6 +343,8 @@ namespace NovelCollProject.plugin
             //if (source.ContainsKey(CollectionFieldName.Chap_Status)) cm.Status = (int)source[CollectionFieldName.Chap_Status];
             if (source.ContainsKey(CollectionFieldName.Chap_ContentLen)) cm.ContentLen = (int)source[CollectionFieldName.Chap_ContentLen];
 
+
+
             //章节对应的章节内容地址
             if (source.ContainsKey(CollectionFieldName.Url)) cm.chapterUrl = (string)source[CollectionFieldName.Url];
             cm.CollectionId = collectionId;
@@ -353,6 +355,11 @@ namespace NovelCollProject.plugin
             if (price > 15)
                 price = 15;
             cm.Pirce = price;
+
+            if (cm.Intro == null)
+            {
+                cm.Intro = "";
+            }
 
         }
 
