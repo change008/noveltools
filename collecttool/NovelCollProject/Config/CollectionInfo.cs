@@ -106,6 +106,11 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1088);
             CollctionModelList.Add(model_1089);
             CollctionModelList.Add(model_1090);
+
+            CollctionModelList.Add(model_1091);
+            CollctionModelList.Add(model_1092);
+            CollctionModelList.Add(model_1093);
+            CollctionModelList.Add(model_1094);
         }
 
         #region 采集小说配置
@@ -1305,6 +1310,74 @@ namespace NovelCollProject
             1090,
             "巫族",
             @"周昊，华医世家的小天才，宅男，上古巫祖传承者。本胸无大志，随遇而安的性子，却不经意中成为各种势力的角力点，而他的本意，仅仅是自己闲的时候随便做点事情。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 桃花医圣 原名 桃运狂医_1091--完结, 
+        /// </summary>
+        public static CollectionModel model_1091 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4473.aspx?chapterlist",
+            1091,
+            "桃花医圣",
+            @"黄非奉命潜入美女如云的公司，执行一项危险任务。
+他凭借七根银针，征服傲娇御姐、迷途校花、野蛮妹纸……
+穷屌丝大逆袭，品味千娇百媚，纵意逍遥人生！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 逍遥包租公 原名 逍遥房东俏房客_1092--完结, 
+        /// </summary>
+        public static CollectionModel model_1092 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4475.aspx?chapterlist",
+            1092,
+            "逍遥包租公",
+            @"离开神秘部门出来，回到城市生活，接管了兄弟遗留下来的别墅，以及一个生患残疾的妹妹，当起了包租公。
+本想过着平淡生活，没想麻烦接踵而至，为了守护住所爱之人，面对强大的敌人，他只能选择迎难而上，将所有敌人踩在脚下",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 少年神医 原名 道医天下_1093--完结, 
+        /// </summary>
+        public static CollectionModel model_1093 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4506.aspx?chapterlist",
+            1093,
+            "少年神医",
+            @"叶丰，终南山中走出的少年神医，身世神秘，性格开朗，有格调，会生活，琴棋书画唱，药酒茶花诗，山医命相卜，无所不精！
+这是一本会带给你轻松愉悦的都市爽文，文中有最美的女人，最生动的情节，最专业的中医桥段，最真实的修炼体验.
+中医太美，中国文化太美！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 超然奇才 原名 超品奇才_1094--完结, 
+        /// </summary>
+        public static CollectionModel model_1094 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4462.aspx?chapterlist",
+            1094,
+            "超然奇才",
+            @"一个失败的投资人，在一场醉酒之后，重生回到八十年代的农村。
+　　改革开放，经济挂帅；苏联突解体，百货换飞机；网络泡沫，金融海啸；股市大起伏，奇才点金手。
+　　在一个个商界神话还未崛起之前，我做第一个神话，永远的神话！",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
             "nothing",
