@@ -111,6 +111,29 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1092);
             CollctionModelList.Add(model_1093);
             CollctionModelList.Add(model_1094);
+
+            CollctionModelList.Add(model_1095);
+            CollctionModelList.Add(model_1096);
+            CollctionModelList.Add(model_1097);
+
+
+            CollctionModelList.Add(model_1098);
+            CollctionModelList.Add(model_1099);
+            CollctionModelList.Add(model_1100);
+            CollctionModelList.Add(model_1101);
+            CollctionModelList.Add(model_1102);
+            CollctionModelList.Add(model_1103);
+            CollctionModelList.Add(model_1104);
+            CollctionModelList.Add(model_1105);
+            CollctionModelList.Add(model_1106);
+
+            CollctionModelList.Add(model_1107);
+            CollctionModelList.Add(model_1108);
+
+            CollctionModelList.Add(model_1109);
+
+            CollctionModelList.Add(model_1110);
+
         }
 
         #region 采集小说配置
@@ -1383,6 +1406,267 @@ namespace NovelCollProject
             "nothing",
             true
             );
+
+
+        /// <summary>
+        /// 超然奇才 原名 超品奇才_1095--完结, 
+        /// </summary>
+        public static CollectionModel model_1095 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4762.aspx?chapterlist",
+            1095,
+            "都市狂少",
+            @"无意间救了美女总裁，麻烦也接踵而来，叶凌风感觉，这个世道真奇怪，为什么有些人明明不是对手，还要来送死呢？！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 微信桃花运 原名 桃运微信_1096--完结, 
+        /// </summary>
+        public static CollectionModel model_1096 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4758.aspx?chapterlist",
+            1096,
+            "微信桃花运",
+            @"普通青年张敬买到山寨手机，意外发现里面的微信，有一个连通未来的朋友圈。从此，张敬的生活发生了翻天覆地的改变。泡美女总裁，踩恶少，走上人生巅峰。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+        /// <summary>
+        /// 特俗姻缘 原名 活人禁忌_1097--完结, 
+        /// </summary>
+        public static CollectionModel model_1097 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/3443.aspx?chapterlist",
+            1097,
+            "特俗姻缘",
+            @"九岁那年，百鬼围家宅，只为来要我的命！爷爷为了救我，硬是给我找了一个女鬼当媳妇儿……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+
+
+        /// <summary>
+        /// 重生之逍遥高手 原名 极品逍遥高手_1098--完结, 
+        /// </summary>
+        public static CollectionModel model_1098 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4756.aspx?chapterlist",
+            1098,
+            "重生之逍遥高手",
+            @"强大修士穿越到地球，却重生成一个傻子！被家族嫌弃？被未婚妻轻蔑？秦世对此不屑一顾！他炼制灵丹妙药，修炼《洗髓经》，成为深藏不漏的绝世高手！想要求药治病，那得看我的心情！敢来找麻烦，统统都杀掉！不知不觉中，人们惊恐发现，所有人命运竟都掌握在他手中！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 纵欢人生 原名 人生得意须纵欢_1099--连载, 
+        /// </summary>
+        public static CollectionModel model_1099 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1583.aspx?chapterlist",
+            1099,
+            "纵欢人生",
+            @"良家少妇，极品尤.物，丰腴熟.女，风情秘书，千娇百艳，妩媚诱人金麟岂是池中物，人生得意须纵欢面朝大海，日到春暖花开讲述李尽欢得到经过无数淫民加持的《春水堂金瓶梅插图本》的金瓶神气之后，无数姑娘们有福了的故事！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 小村名医 原名 山村名医_1100--完结, 
+        /// </summary>
+        public static CollectionModel model_1100 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4697.aspx?chapterlist",
+            1100,
+            "小村名医",
+            @"为了保护姚玉莲不被欺负，刘大柱挺身而出。他学医术，练武功，救死扶伤，带领村民勤劳致富，从一个落魄的毛头小子变成远近闻名的大人物。 村里的小媳妇大姑娘不淡定了，连城里的年轻女老板，还有女明星女老外都争先恐后的要跟他交朋友。 “大柱，快到我的碗里来……” “不去，俺要回去给媳妇讲故事……”",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 美女上司的隐私 原名 红颜迷途：女上司的隐私_1101--完结, 
+        /// </summary>
+        public static CollectionModel model_1101 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/2846.aspx?chapterlist",
+            1101,
+            "美女上司的隐私",
+            @"上班第一天，发现女上司竟是被自己非礼过的绝色美女，更要命的是他无意中又发现了美女上司的绝密隐私……但他此后交上了桃花运，在风云变幻的利欲场上更是得心应手，面对各色对手，美人计，反间计，连环计，瞒天过海计，借尸还魂计，金蝉脱壳计，各种计……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 异界修炼系统 原名 超级修炼系统_1102--完结, 
+        /// </summary>
+        public static CollectionModel model_1102 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4649.aspx?chapterlist",
+            1102,
+            "异界修炼系统",
+            @"地球上的超级游戏高手因为一场意外而穿越到以武力为尊的异界中，成了一个被人陷害差点死去的废柴！却意外得到了超级修炼系统，系统加身小小废柴再次开始了强势的崛起之路！你说什么？你有厉害的阵兵？我可是有能兑换万物的超级系统。你有增加修为的灵丹妙药？来！来！来！这一瓶增加修为的九龙丹就便宜点卖你吧，要多少有多少！你问我为何什么叼？呵呵，此事就说来话长了，且听我慢慢道来……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 都市修真强少 原名 超级修真强少_1103--完结, 
+        /// </summary>
+        public static CollectionModel model_1103 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4173.aspx?chapterlist",
+            1103,
+            "都市修真强少",
+            @"陈默，表面上是普通的医科大学的学生，实际上却是一名修真者，在一份遗嘱到来之后，原本平静的生活，发生了意想不到的波澜…… 修真，修真，去假求真，红尘乱世，我只为本心不灭！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 神算天下 原名 阴阳神算_1104--完结, 
+        /// </summary>
+        public static CollectionModel model_1104 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4600.aspx?chapterlist",
+            1104,
+            "神算天下",
+            @"我是个孤儿，没上过一天学。是师父把我养大的，他是个算命先生，从小就带着我走南闯北，四海为家。师父前两年去了，把算命摊心生阁传给了我，临终还给我立下了规矩。哪知那天，店里来了一个性感美女，她用那种方法逼迫我坏了阴卦不看女的规矩，害我惹下了大祸……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 假冒大少爷 原名 冒牌狂少_1105--完结, 
+        /// </summary>
+        public static CollectionModel model_1105 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4131.aspx?chapterlist",
+            1105,
+            "假冒大少爷",
+            @"顶尖的佣兵，摇身一变成为了冒牌大少爷。这种挥金如土的日子，绝对的安逸……漂亮的女管家，傲娇的俏明星，火辣的美校花，全部来袭。“我是很有钱，但是我比钱更有吸引力，姑娘们，看见这么潇洒的我，不要想入非非，还请自重啊！”",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+        /// <summary>
+        /// 冥界姻缘 原名 阴缘难逃_1106--完结, 
+        /// </summary>
+        public static CollectionModel model_1106 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4734.aspx?chapterlist",
+            1106,
+            "冥界姻缘",
+            @"爷爷是个算命先生，他去世那天，傻子哥哥从他坟头背回来一具尸体，说是爷爷让他背回来给我做媳妇儿的，可这尸体竟然是……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 都市怪医 原名 大怪医_1107--完结, 
+        /// </summary>
+        public static CollectionModel model_1107 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4064.aspx?chapterlist",
+            1107,
+            "都市怪医",
+            @"以医入道未济世，功德十万方问仙！这是一个穿越修真者行走现代人间的有趣的故事。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 别样继承人 原名 非法继承人_1108--完结, 
+        /// </summary>
+        public static CollectionModel model_1108 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4044.aspx?chapterlist",
+            1108,
+            "别样继承人",
+            @"他不笑的时候很帅，笑起来就有点猥琐，从娘胎里生出来就带着“霉运”，却在监狱里交上了狗屎运，凭借400CC血救了一个大人物，从此屁股后面跟着一个排的美女穷追不舍……
+胸大无脑的小律师，刁钻古怪的富家千金，美艳绝伦的未亡人，丰腴迷人的警嫂，身世迷离的母女花，以及形形色色的燕环肥瘦在他猥琐的笑容和甜言蜜语中迷失了自己。",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+        /// <summary>
+        /// 神眼天通 原名 超级透视神眼_1109--完结, 
+        /// </summary>
+        public static CollectionModel model_1109 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4036.aspx?chapterlist",
+            1109,
+            "神眼天通",
+            @"一双透视神眼，看破世间虚妄，天上地下，无所遁形！",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 都市狂兵 原名 终极狂兵在都市_1110--完结, 
+        /// </summary>
+        public static CollectionModel model_1110 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4015.aspx?chapterlist",
+            1110,
+            "都市狂兵",
+            @"三年前佣兵大战，天狼特战队死伤过半，队长梁鹏销声匿迹，
+三年后，逆天强者重现都市，再度掀起血雨腥风！
+铁拳硬脚打出一片天下，千万别惹我，否则干死你。
+看佣兵之王如何称霸都市，一血前耻！
+热血传奇就此展开·············",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
 
     }
 

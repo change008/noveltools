@@ -33,22 +33,22 @@ namespace NovelCollProject.plugin.web_23us
         }
 
 
-        //public override void Load(bool isUTF8, int bookId = 0)
-        //{
-        //    if (PageFeature.MatchURL(Url) == PageTypeEnum.ListPage1)
-        //    {
-        //        SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-        //        SetCookie("jieqiVisitId=article_articleviews%3D1293; background=bg_lan; fontFamily=fam_hei; fontSize=fon_24; UM_distinctid=15e3dea7c607ee-01ee6e8b9c796-3f63450e-1fa400-15e3dea7c61b14; CNZZDATA1260070930=308938530-1504276205-%7C1504276205; BLR=1/1293%23430965%23%u529E%u516C%u5BA4%u8BF1%u60D1%uFF1A%u6F02%u4EAE%u5973%u4E0A%u53F8%23%u7AE0%u8282%u76EE%u5F55%20%u7B2C1%u7AE0%20%u90FD%u662F%u201C%u5077%u7AA5%u201D%u60F9%u7684%u7978");
-        //        SetHost("www.sangwu.org");
-        //    }
-        //    else
-        //    {
-        //        SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-        //        SetCookie("jieqiVisitId=article_articleviews%3D1293; background=bg_lan; fontFamily=fam_hei; fontSize=fon_24; UM_distinctid=15e3dea7c607ee-01ee6e8b9c796-3f63450e-1fa400-15e3dea7c61b14; CNZZDATA1260070930=308938530-1504276205-%7C1504276205; BLR=1/1293%23430965%23%u529E%u516C%u5BA4%u8BF1%u60D1%uFF1A%u6F02%u4EAE%u5973%u4E0A%u53F8%23%u7AE0%u8282%u76EE%u5F55%20%u7B2C1%u7AE0%20%u90FD%u662F%u201C%u5077%u7AA5%u201D%u60F9%u7684%u7978");
-        //        SetHost("www.sangwu.org");
-        //    }
-        //    base.Load(isUTF8, bookId);
-        //}
+        public override void Load(bool isUTF8, int bookId = 0)
+        {
+            if (PageFeature.MatchURL(Url) == PageTypeEnum.ListPage1)
+            {
+                SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
+                SetCookie("bdshare_firstime=1504105500426; UM_distinctid=15e33ac8f56278-03d2267dbb7495-3e64430f-1fa400-15e33ac8f57343; bookid=201390; chapterid=1163094; chaptername=%25u7B2C1300%25u7AE0%2520%25u79BB%25u95F4; Hm_lvt_4637b2d5be4ce91be6f61441d61e1074=1504105502,1504365699; visid_incap_1353717=C4b3czGIQRuyH9jTVpsfTgcp3lkAAAAAQUIPAAAAAABm88jsSE8+H5txZQlWxcnM; incap_ses_432_1353717=ex4TLf4UoDoeOzk7ocb+BQcp3lkAAAAABFiQWPIG5SX2ClZBbP1jig==; CNZZDATA1257130134=1018383422-1504100451-null%7C1507727860");
+                SetHost("www.23us.cc");
+            }
+            else
+            {
+                SetUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
+                SetCookie("bdshare_firstime=1504105500426; UM_distinctid=15e33ac8f56278-03d2267dbb7495-3e64430f-1fa400-15e33ac8f57343; bookid=201390; chapterid=1163094; chaptername=%25u7B2C1300%25u7AE0%2520%25u79BB%25u95F4; Hm_lvt_4637b2d5be4ce91be6f61441d61e1074=1504105502,1504365699; visid_incap_1353717=C4b3czGIQRuyH9jTVpsfTgcp3lkAAAAAQUIPAAAAAABm88jsSE8+H5txZQlWxcnM; incap_ses_432_1353717=ex4TLf4UoDoeOzk7ocb+BQcp3lkAAAAABFiQWPIG5SX2ClZBbP1jig==; CNZZDATA1257130134=1018383422-1504100451-null%7C1507727860");
+                SetHost("www.23us.cc");
+            }
+            base.Load(isUTF8, bookId);
+        }
 
 
 
