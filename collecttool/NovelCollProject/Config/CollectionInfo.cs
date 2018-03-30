@@ -109,7 +109,11 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1091);
             CollctionModelList.Add(model_1092);
             CollctionModelList.Add(model_1093);
+
+
+
 			CollctionModelList.Add(model_1132);
+            CollctionModelList.Add(model_1133);
         }
 
         #region 采集小说配置
@@ -1408,7 +1412,7 @@ namespace NovelCollProject
             "web_quanshuwu",
             "http://www.quanshuwu.com/book/4758.aspx?chapterlist",
             1096,
-            "nothing", false);
+            "微信桃花运",
             @"普通青年张敬买到山寨手机，意外发现里面的微信，有一个连通未来的朋友圈。从此，张敬的生活发生了翻天覆地的改变。泡美女总裁，踩恶少，走上人生巅峰。",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
@@ -1657,7 +1661,19 @@ namespace NovelCollProject
             "nothing",
             "nothing", false);
 
-
+        /// <summary>
+        /// 乡村小男医 原名 乡野妇科男医_1133-- 
+        /// </summary>
+        public static CollectionModel model_1133 = new CollectionModel(
+            1,
+            "web_365if",
+            "http://www.365if.com/list/44/44312.html?chapterlist",
+            1133,
+            "乡村小男医",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
     }
 
 
