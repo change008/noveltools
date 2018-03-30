@@ -92,7 +92,6 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1076);
             CollctionModelList.Add(model_1077);
             CollctionModelList.Add(model_1078);
-            CollctionModelList.Add(model_1079);
 
             CollctionModelList.Add(model_1080);
             CollctionModelList.Add(model_1081);
@@ -110,30 +109,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1091);
             CollctionModelList.Add(model_1092);
             CollctionModelList.Add(model_1093);
-            CollctionModelList.Add(model_1094);
-
-            CollctionModelList.Add(model_1095);
-            CollctionModelList.Add(model_1096);
-            CollctionModelList.Add(model_1097);
-
-
-            CollctionModelList.Add(model_1098);
-            CollctionModelList.Add(model_1099);
-            CollctionModelList.Add(model_1100);
-            CollctionModelList.Add(model_1101);
-            CollctionModelList.Add(model_1102);
-            CollctionModelList.Add(model_1103);
-            CollctionModelList.Add(model_1104);
-            CollctionModelList.Add(model_1105);
-            CollctionModelList.Add(model_1106);
-
-            CollctionModelList.Add(model_1107);
-            CollctionModelList.Add(model_1108);
-
-            CollctionModelList.Add(model_1109);
-
-            CollctionModelList.Add(model_1110);
-
+			CollctionModelList.Add(model_1132);
         }
 
         #region 采集小说配置
@@ -1432,7 +1408,7 @@ namespace NovelCollProject
             "web_quanshuwu",
             "http://www.quanshuwu.com/book/4758.aspx?chapterlist",
             1096,
-            "微信桃花运",
+            "nothing", false);
             @"普通青年张敬买到山寨手机，意外发现里面的微信，有一个连通未来的朋友圈。从此，张敬的生活发生了翻天覆地的改变。泡美女总裁，踩恶少，走上人生巅峰。",
             "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
             "nothing",
@@ -1666,6 +1642,20 @@ namespace NovelCollProject
             true
             );
 
+
+        /// <summary>
+        /// 超级小厨子 原名 王牌少年厨神_1132--完结 
+        /// </summary>
+        public static CollectionModel model_1132 = new CollectionModel(
+            2,
+            "web_365if",
+            "http://www.365if.com/list/99/99790.html?chapterlist",
+            1132,
+            "超级小厨子",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
 
 
     }
