@@ -111,8 +111,38 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1093);
 
 
+            CollctionModelList.Add(model_1098);
+            CollctionModelList.Add(model_1099);
+            CollctionModelList.Add(model_1100);
+            CollctionModelList.Add(model_1101);
+            CollctionModelList.Add(model_1102);
+            CollctionModelList.Add(model_1103);
+            CollctionModelList.Add(model_1104);
+            CollctionModelList.Add(model_1105);
+            CollctionModelList.Add(model_1106);
 
-			CollctionModelList.Add(model_1132);
+            CollctionModelList.Add(model_1107);
+            CollctionModelList.Add(model_1108);
+
+            CollctionModelList.Add(model_1109);
+
+            CollctionModelList.Add(model_1110);
+
+            CollctionModelList.Add(model_1118);
+            CollctionModelList.Add(model_1119);
+            CollctionModelList.Add(model_1120);
+            CollctionModelList.Add(model_1121);
+            CollctionModelList.Add(model_1122);
+            CollctionModelList.Add(model_1123);
+            CollctionModelList.Add(model_1124);
+
+            CollctionModelList.Add(model_1127);
+
+            CollctionModelList.Add(model_1129);
+            CollctionModelList.Add(model_1130);
+            CollctionModelList.Add(model_1131);
+
+            CollctionModelList.Add(model_1132);
             CollctionModelList.Add(model_1133);
         }
 
@@ -131,16 +161,27 @@ namespace NovelCollProject
         //    "chunyexiaocunyi",
         //    "nothing");
 
+        //public static CollectionModel model_1002 = new CollectionModel(
+        //    1,
+        //    "web_23us",
+        //    "http://www.23us.cc/html/201/201390/?chapterlist",
+        //    1002,
+        //    "春野小村医",
+        //    @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
+        //    "http://m.hkslg520.com/modules/article/images/nocover.jpg",
+        //    "chunyexiaocunyi",
+        //    "nothing", true);
+
         public static CollectionModel model_1002 = new CollectionModel(
             1,
-            "web_23us",
-            "http://www.23us.cc/html/201/201390/?chapterlist",
+            "web_88dushu",
+            "http://www.88dushu.com/xiaoshuo/83/83497/?chapterlist",
             1002,
             "春野小村医",
-            @"回乡小农民无意得神农咒语，开始了自己强悍的人生。青山绿水，他要打造一片人间乐土。钱要有，美女更要有！村花校花、人妻少妇……等等，我今晚该在哪个房间睡？",
+            @"",
             "http://m.hkslg520.com/modules/article/images/nocover.jpg",
             "chunyexiaocunyi",
-            "nothing", true);
+            "nothing");
 
 
 
@@ -184,19 +225,44 @@ namespace NovelCollProject
             "meiyanmingqi",
             "nothing");
 
+        ///// <summary>
+        ///// 小村那些事_1005 --连载中 //"http://www.wxguan.com/wenzhang/75/75123/?chapterlist",
+        ///// </summary>
+        //public static CollectionModel model_1005 = new CollectionModel(
+        //    1,
+        //    "web_lwxs",
+        //    "http://www.lwxs.com/shu/41/41439/?chapterlist",  
+        //    1005,
+        //    "小村那些事",
+        //    @"自从村子里出了个杨小宝，乡村生活开始丰富了起来。比如帮寡妇马老师家里打打旱井。帮美女丽丽赶跑追求她的流氓。帮隔壁雪梅婶婶治愈多年不育的顽疾。帮村里修通了通往镇上的大路。乡亲们，姐妹们，我杨小宝来了！",
+        //    "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
+        //    "xiaocunnaxieshi",
+        //    "nothing");
+
+
+
         /// <summary>
         /// 小村那些事_1005 --连载中 //"http://www.wxguan.com/wenzhang/75/75123/?chapterlist",
         /// </summary>
         public static CollectionModel model_1005 = new CollectionModel(
             1,
-            "web_lwxs",
-            "http://www.lwxs.com/shu/41/41439/?chapterlist",  
+            "web_7kshu",
+            "http://www.7kshu.com/41/41111/?chapterlist",
             1005,
             "小村那些事",
             @"自从村子里出了个杨小宝，乡村生活开始丰富了起来。比如帮寡妇马老师家里打打旱井。帮美女丽丽赶跑追求她的流氓。帮隔壁雪梅婶婶治愈多年不育的顽疾。帮村里修通了通往镇上的大路。乡亲们，姐妹们，我杨小宝来了！",
             "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
             "xiaocunnaxieshi",
             "nothing");
+        
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// 妇科小村医_1006 --已完结
@@ -215,19 +281,38 @@ namespace NovelCollProject
 
 
 
+        ///// <summary>
+        ///// 神棍小村医_1007  神棍小村医--未完结
+        ///// </summary>
+        //public static CollectionModel model_1007 = new CollectionModel(
+        //    1,
+        //    "web_ziyouge",
+        //    "http://www.ziyouge.com/zy/13/13066/index.html?chapterlist",
+        //    1007,
+        //    "神棍小村医",
+        //    @"山村少年方小宇，因砸破奇石获异能，从此精通医术、风水、看相和鉴宝。 他点中了事业桃花双旺的风水宝地。开塘办厂建电站，带领乡亲奔小康。护士警花女教师，村花校花留守妇，模特明星女老总，桃花运来挡不住……",
+        //    "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
+        //    "shengunxiaocunyi",
+        //    "nothing");
+
+
         /// <summary>
-        /// 神棍小村医_1007 --未完结
+        /// 神棍小村医_1007  神棍小村医--未完结
         /// </summary>
         public static CollectionModel model_1007 = new CollectionModel(
             1,
-            "web_ziyouge",
-            "http://www.ziyouge.com/zy/13/13066/index.html?chapterlist",
+            "web_hkslg",
+            "https://www.hkslg.net/184/184351/?chapterlist",
             1007,
             "神棍小村医",
             @"山村少年方小宇，因砸破奇石获异能，从此精通医术、风水、看相和鉴宝。 他点中了事业桃花双旺的风水宝地。开塘办厂建电站，带领乡亲奔小康。护士警花女教师，村花校花留守妇，模特明星女老总，桃花运来挡不住……",
             "http://danhuang.zhanlve5.com/static/image/s_cover.jpg",
             "shengunxiaocunyi",
             "nothing");
+
+
+
+
 
         /// <summary>
         /// 我把自己卖给了富婆_1008 --未完结
@@ -244,7 +329,7 @@ namespace NovelCollProject
             "nothing");
 
         /// <summary>
-        /// 假面娇妻_1009 --未完结
+        /// 假面娇妻_1009 --完结
         /// </summary>
         public static CollectionModel model_1009 = new CollectionModel(
             1,
@@ -294,7 +379,7 @@ namespace NovelCollProject
             "http://www.51cxw.cn/cxw7195/?chapterlist",
             1012,
             "今晚有料",
-            @"因为尴尬的事情，我装作聋哑人做了上门女婿。    各位书友要是觉得《今夜有戏》还不错的话请不要忘记向您QQ群和微博里的朋友推荐哦！",
+            @"",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "jinwanyouliao",
             "nothing");
@@ -359,10 +444,25 @@ namespace NovelCollProject
         /// <summary>
         /// 生态园里的爱恋 原名 寡嫂_1017 --连载中, 
         /// </summary>
+        //public static CollectionModel model_1017 = new CollectionModel(
+        //    1,
+        //    "web_lwtxt",
+        //    "http://www.lwtxt.net/book/48/48138/?chapterlist",
+        //    1017,
+        //    "生态园里的爱恋",
+        //    @"我没有血缘关系的哥不幸死了，为了保护年轻漂亮的嫂子，两年前我因为她差点杀人，逃出山村。 现在回来了，我继续要保护嫂子，跟她一起过人生。但却碰上了生态园的成熟美艳女经理，俏丽的小护士，还有村里的小妖女和生态园的贵妇女客人，让我十八岁的青春很多彩",
+        //    "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+        //    "shengtaiyuan",
+        //    "nothing");
+
+
+        /// <summary>
+        /// 生态园里的爱恋 原名 寡嫂_1017 --连载中, 
+        /// </summary>
         public static CollectionModel model_1017 = new CollectionModel(
             1,
-            "web_lwtxt",
-            "http://www.lwtxt.net/book/48/48138/?chapterlist",
+            "web_xqqxs",
+            "http://www.xqqxs.com/xs/14/14403/?chapterlist",
             1017,
             "生态园里的爱恋",
             @"我没有血缘关系的哥不幸死了，为了保护年轻漂亮的嫂子，两年前我因为她差点杀人，逃出山村。 现在回来了，我继续要保护嫂子，跟她一起过人生。但却碰上了生态园的成熟美艳女经理，俏丽的小护士，还有村里的小妖女和生态园的贵妇女客人，让我十八岁的青春很多彩",
@@ -370,8 +470,9 @@ namespace NovelCollProject
             "shengtaiyuan",
             "nothing");
 
+
         /// <summary>
-        /// 同居日记 原名 和小姨子同居的日子_1018--连载中, 
+        /// 同居日记 原名 和小姨子同居的日子_1018--完结, 
         /// </summary>
         public static CollectionModel model_1018 = new CollectionModel(
             1,
@@ -642,20 +743,45 @@ namespace NovelCollProject
             "nothing",
             "nothing");
 
+
+
+        ///// <summary>
+        ///// 女总裁的超级保镖 原名 女总裁的雇佣兵王_1042--连载, 
+        ///// </summary>
+        //public static CollectionModel model_1042 = new CollectionModel(
+        //    1,
+        //    "web_guijj",
+        //    "http://www.guijj.com/mulu/8746.html?chapterlist",
+        //    1042,
+        //    "女总裁的超级保镖",
+        //    @"...",
+        //    "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+        //    "nothing",
+        //    "nothing",true);
+
+
         /// <summary>
         /// 女总裁的超级保镖 原名 女总裁的雇佣兵王_1042--连载, 
         /// </summary>
         public static CollectionModel model_1042 = new CollectionModel(
             1,
-            "web_guijj",
-            "http://www.guijj.com/mulu/8746.html?chapterlist",
+            "web_shuge",
+            "http://www.shuge.net/html/45/45652/",
             1042,
             "女总裁的超级保镖",
             @"...",
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
-            "nothing",true);
+            "nothing", true);
+
+
+
         #endregion
+
+
+
+
+
 
         /// <summary>
         /// 乡村里的一些事 原名 乡村那些事儿_1043--连载, 
@@ -809,10 +935,10 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 夜玫瑰之歌 原名 爱上夜玫瑰_1056--连载, 
+        /// 夜玫瑰之歌 原名 爱上夜玫瑰_1056--完结
         /// </summary>
         public static CollectionModel model_1056 = new CollectionModel(
-            1,
+            2,
             "web_xiangcunxiaoshuo",
             "http://www.xiangcunxiaoshuo.com/html/410377/?chapterlist",
             1056,
@@ -990,7 +1116,7 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 都市猎艳 原名 福艳之都市后宫_1071--连载, 
+        /// 都市猎艳 原名 福艳之都市后宫_1071--完结, 
         /// </summary>
         public static CollectionModel model_1071 = new CollectionModel(
             2,
@@ -1006,7 +1132,7 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 无上通天录 原名 极乐宝典_1072--连载, 
+        /// 无上通天录 原名 极乐宝典_1072--完结, 
         /// </summary>
         public static CollectionModel model_1072 = new CollectionModel(
             2,
@@ -1022,7 +1148,7 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 魂者 原名 阴阳代理人_1073--连载, 
+        /// 魂者 原名 阴阳代理人_1073--完结, 
         /// </summary>
         public static CollectionModel model_1073 = new CollectionModel(
             2,
@@ -1054,7 +1180,7 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 都市猎美记 原名 都市娇妻之美女后宫_1075--连载, 
+        /// 都市猎美记 原名 都市娇妻之美女后宫_1075--完结, 
         /// </summary>
         public static CollectionModel model_1075 = new CollectionModel(
             2,
@@ -1070,10 +1196,10 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 极品女校长 原名 我的绝美女校长_1076--连载, 
+        /// 极品女校长 原名 我的绝美女校长_1076--完结, 
         /// </summary>
         public static CollectionModel model_1076 = new CollectionModel(
-            1,
+            2,
             "web_quanshuwu",
             "http://www.quanshuwu.com/book/4637.aspx?chapterlist",
             1076,
@@ -1087,10 +1213,10 @@ namespace NovelCollProject
 
 
         /// <summary>
-        /// 透视极品 原名 绝品透视_1077--连载, 
+        /// 透视极品 原名 绝品透视_1077--完结, 
         /// </summary>
         public static CollectionModel model_1077 = new CollectionModel(
-            1,
+            2,
             "web_quanshuwu",
             "http://www.quanshuwu.com/book/4618.aspx?chapterlist",
             1077,
@@ -1103,10 +1229,10 @@ namespace NovelCollProject
             );
 
         /// <summary>
-        /// 极品先生 原名 极品风水师_1078--连载, 
+        /// 极品先生 原名 极品风水师_1078--完结, 
         /// </summary>
         public static CollectionModel model_1078 = new CollectionModel(
-            1,
+            2,
             "web_quanshuwu",
             "http://www.quanshuwu.com/book/4536.aspx?chapterlist",
             1078,
@@ -1646,6 +1772,185 @@ namespace NovelCollProject
             true
             );
 
+
+        /// <summary>
+        /// 美艳丛林 原名 绝色花丛 _1118--完结, 
+        /// </summary>
+        public static CollectionModel model_1118 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/145.aspx?chapterlist",
+            1118,
+            "美艳丛林",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 桃色村医 原名 桃运小村医_1119--完结, 
+        /// </summary>
+        public static CollectionModel model_1119 = new CollectionModel(
+            2,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/3952.aspx?chapterlist",
+            1119,
+            "桃色村医",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 世外村落 原名 桃花村的女人_1120--, 
+        /// </summary>
+        public static CollectionModel model_1120 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/3301.aspx?chapterlist",
+            1120,
+            "世外村落",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 爱欲村色 原名 乡村欲爱 _1121--完结, 
+        /// </summary>
+        public static CollectionModel model_1121 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4231.aspx?chapterlist",
+            1121,
+            "爱欲村色",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 医路神通 原名 乡艳小村医 _1122--完结, 
+        /// </summary>
+        public static CollectionModel model_1122 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/2567.aspx?chapterlist",
+            1122,
+            "医路神通",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 乡村之路 原名 走村媳妇好美 _1123--完结, 
+        /// </summary>
+        public static CollectionModel model_1123 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/2442.aspx?chapterlist",
+            1123,
+            "乡村之路",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+        /// <summary>
+        /// 乡村艳色 原名 山村情事 _1124--完结, 
+        /// </summary>
+        public static CollectionModel model_1124 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1618.aspx?chapterlist",
+            1124,
+            "乡村艳色",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+        /// <summary>
+        /// 都市风水大师 原名 绝品风水师 _1127--完结, 
+        /// </summary>
+        public static CollectionModel model_1127 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/2605.aspx?chapterlist",
+            1127,
+            "都市风水大师",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+
+        /// <summary>
+        /// 小村医的崛起 原名 逍遥小村医 _1129--完结, 
+        /// </summary>
+        public static CollectionModel model_1129 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/4820.aspx?chapterlist",
+            1129,
+            "小村医的崛起",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 情爱乡村 原名 乡野迷情小村医 _1130--完结, 
+        /// </summary>
+        public static CollectionModel model_1130 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1515.aspx?chapterlist",
+            1130,
+            "情爱乡村",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
+
+        /// <summary>
+        /// 圆梦乡村 原名 最强乡村 _1131--完结, 
+        /// </summary>
+        public static CollectionModel model_1131 = new CollectionModel(
+            1,
+            "web_quanshuwu",
+            "http://www.quanshuwu.com/book/1327.aspx?chapterlist",
+            1131,
+            "圆梦乡村",
+            @"",
+            "http://danhuang.zhanlve5.com/static/image/mycover_b.jpg",
+            "nothing",
+            "nothing",
+            true
+            );
 
         /// <summary>
         /// 超级小厨子 原名 王牌少年厨神_1132--完结 
