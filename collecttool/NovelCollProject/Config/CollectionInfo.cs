@@ -92,6 +92,7 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1076);
             CollctionModelList.Add(model_1077);
             CollctionModelList.Add(model_1078);
+            CollctionModelList.Add(model_1079);
 
             CollctionModelList.Add(model_1080);
             CollctionModelList.Add(model_1081);
@@ -144,6 +145,8 @@ namespace NovelCollProject
 
             CollctionModelList.Add(model_1132);
             CollctionModelList.Add(model_1133);
+            CollctionModelList.Add(model_1134);
+            CollctionModelList.Add(model_1135);
         }
 
         #region 采集小说配置
@@ -1979,6 +1982,37 @@ namespace NovelCollProject
             "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
             "nothing",
             "nothing", false);
+
+
+        /// <summary>
+        /// 娇妻亲上瘾 原名 小妻吻上瘾_1134-- 
+        /// </summary>
+        public static CollectionModel model_1134 = new CollectionModel(
+            1,
+            "web_365if",
+            "http://www.365if.com/list/109/109422.html?chapterlist",
+            1134,
+            "娇妻亲上瘾",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+
+        /// <summary>
+        /// 乡村透视小郎中 原名  乡村透视小仙医_1135-- 
+        /// </summary>
+        public static CollectionModel model_1135 = new CollectionModel(
+            1,
+            "web_365if",
+            "http://www.365if.com/list/110/110344.html?chapterlist",
+            1135,
+            "乡村透视小郎中",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
     }
 
 

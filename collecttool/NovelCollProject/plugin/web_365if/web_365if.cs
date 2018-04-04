@@ -129,19 +129,7 @@ namespace NovelCollProject.plugin.web_365if
                     ht.Add(CollectionFieldName.Chap_Title, title);
                     ht.Add(CollectionFieldName.Url, url);
                     ht.Add(CollectionFieldName.Chap_UniqueFlag, flag);
-                    if (!string.IsNullOrEmpty(title))
-                    {
-                        reg = new Regex(@"第(\d+)章");
-                        m = reg.Match(title);
-                        if (m.Success)
-                        {
-                            int order = Convert.ToInt32(reg.Replace(m.Value, "$1"));
-                            ht.Add(CollectionFieldName.Chap_SortOrder, order);
-                        }
-                    }
-                    else
-                    {
-                    }
+              
                     links.Add(ht);
                 }
             }
