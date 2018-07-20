@@ -68,10 +68,12 @@ namespace NovelCollProject.net
             byte[] bResult = null;
 
             int timecounter = 0;
-            while (bResult == null && timecounter++ < 100)
+            while (bResult == null && timecounter++ < 10)
             {
                 try
                 {
+                    GetWebRequest(new Uri(url));
+
                     if (postBytes == null)
                     {
                         bResult = DownloadData(url);
@@ -83,6 +85,7 @@ namespace NovelCollProject.net
                 }
                 catch (WebException exp)
                 {
+                    timecounter++;
                     _logger.FatalFormat("网站访问出错。状态{0},错误消息：{1}", (int)exp.Status, exp.Message);
 
 
@@ -94,11 +97,12 @@ namespace NovelCollProject.net
                     else
                     {
                         //Log.ShowLine(url+" 异常，不再尝试！", ConsoleColor.Red);
-                        break;
+                        //break;
                     }
                 }
                 catch (NotSupportedException exp)
                 {
+                    timecounter++;
                     break;
                 }
             }

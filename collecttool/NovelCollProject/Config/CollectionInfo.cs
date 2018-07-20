@@ -147,6 +147,20 @@ namespace NovelCollProject
             CollctionModelList.Add(model_1133);
             CollctionModelList.Add(model_1134);
             CollctionModelList.Add(model_1135);
+
+
+
+            CollctionModelList.Add(model_1301);
+            CollctionModelList.Add(model_1302);
+            CollctionModelList.Add(model_1303);
+            CollctionModelList.Add(model_1304);
+            CollctionModelList.Add(model_1305);
+
+            CollctionModelList.Add(model_1306);
+            CollctionModelList.Add(model_1307);
+
+            CollctionModelList.Add(model_1308);
+            CollctionModelList.Add(model_1309);
         }
 
         #region 采集小说配置
@@ -2013,6 +2027,128 @@ namespace NovelCollProject
             "nothing",
             "nothing", false);
 
+      /// <summary>
+        /// 抗日之红颜悍将---红颜抗日_1301  完结
+        /// </summary>
+        public static CollectionModel model_1301 = new CollectionModel(
+            2,
+            "web_tx",
+            "http://affair.book.tiexue.net/yc/admin/ContentList.aspx?ChapterID=90710",
+            1301,
+            "红颜抗日",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+        /// <summary>
+        /// 抗日之流氓部队---抗日我最强_1302  完结
+        /// </summary>
+        public static CollectionModel model_1302 = new CollectionModel(
+            2,
+            "web_tx",
+            "http://affair.book.tiexue.net/yc/admin/ContentList.aspx?ChapterID=82933",
+            1302,
+            "抗日我最强",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+        /// <summary>
+        /// 白色---亮白_1303  完结
+        /// </summary>
+        public static CollectionModel model_1303 = new CollectionModel(
+            2,
+            "web_tx",
+            "http://affair.book.tiexue.net/yc/admin/ContentList.aspx?ChapterID=78303",
+            1303,
+            "亮白",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+        /// <summary>
+        /// 大唐风流军师 ---- 唐朝流氓师爷_1304  完结
+        /// </summary>
+        public static CollectionModel model_1304 = new CollectionModel(
+            2,
+            "web_tx",
+            "http://affair.book.tiexue.net/yc/admin/ContentList.aspx?ChapterID=87974",
+            1304,
+            "唐朝流氓师爷",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+        /// <summary>
+        /// 盛唐特种兵 ---  最强大唐兵王_1305  完结
+        /// </summary>
+        public static CollectionModel model_1305 = new CollectionModel(
+            2,
+            "web_tx",
+            "http://affair.book.tiexue.net/yc/admin/ContentList.aspx?ChapterID=87877",
+            1305,
+            "最强大唐兵王",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+
+
+        /// <summary>
+        /// 超品透视 --- 最强透视_1306  完结
+        /// </summary>
+        public static CollectionModel model_1306 = new CollectionModel(
+            2,
+            "web_88dus",
+            "https://www.88dus.com/xiaoshuo/54/54451/?chapterlist",
+            1306,
+            "最强透视",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+
+        /// <summary>
+        /// 最强兵王 --- 超级特种兵_1307  完结
+        /// </summary>
+        public static CollectionModel model_1307 = new CollectionModel(
+            2,
+            "web_sjtxt",
+            "https://www.sjtxt.la/book/62576/?chapterlist",
+            1307,
+            "超级特种兵",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", true);
+
+        /// <summary>
+        /// 好色小姨 --- 我的小姨_1308  完结
+        /// </summary>
+        public static CollectionModel model_1308 = new CollectionModel(
+            2,
+            "web_shubao520",
+            "http://www.shubao520.net/books/21/21803/index.html?chapterlist",
+            1308,
+            "我的小姨",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
+        /// <summary>
+        /// 流氓老师 --- 我的好色老师_1309  完结
+        /// </summary>
+        public static CollectionModel model_1309 = new CollectionModel(
+            2,
+            "web_shubao520",
+            "http://www.shubao520.net/books/0/67/index.html?chapterlist",
+            1309,
+            "我的好色老师",
+            @"……",
+            "http://danhuang.zhanlve5.com/static/image/mycover_a.jpg",
+            "nothing",
+            "nothing", false);
     }
 
 
@@ -2124,7 +2260,7 @@ namespace NovelCollProject
                 return null;
             }
 
-            if (string.IsNullOrEmpty(maxchapterid))
+            if (string.IsNullOrEmpty(maxchapterid) || maxchapterid.Equals("sectionend"))
             {
                 return chapterList.First();
             }

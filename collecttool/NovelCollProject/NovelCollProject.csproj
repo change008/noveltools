@@ -107,12 +107,16 @@
     <Compile Include="plugin\PageBase.cs" />
     <Compile Include="plugin\PageFeature.cs" />
     <Compile Include="plugin\PluginGeneral.cs" />
+    <Compile Include="plugin\web_88dus\web_88dus.cs" />
     <Compile Include="plugin\web_shuge\web_shuge.cs" />
     <Compile Include="plugin\web_23us\web_23us.cs" />
     <Compile Include="plugin\web_7kshu\web_7kshu.cs" />
     <Compile Include="plugin\web_hkslg\web_hkslg.cs" />
+    <Compile Include="plugin\web_shubao520\web_shubao520.cs" />
+    <Compile Include="plugin\web_sjtxt\web_sjtxt.cs" />
     <Compile Include="plugin\web_sangwu\web_sangwu.cs" />
     <Compile Include="plugin\web_88dushu\web_88dushu.cs" />
+    <Compile Include="plugin\web_tx\web_tx.cs" />
     <Compile Include="plugin\web_xqqxs\web_xqqxs.cs" />
     <Compile Include="plugin\web_xiangcunxiaoshuo\web_xiangcunxiaoshuo.cs" />
     <Compile Include="plugin\web_d9cn\web_d9cn.cs" />
